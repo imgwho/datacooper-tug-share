@@ -152,6 +152,8 @@ class: text-center
 
 # cwprep 架构图
 
+<div class="mt-10 flex justify-center items-center overflow-hidden">
+  <div class="transform scale-150 origin-center bg-white/40 p-10 rounded-[40px] border border-border/50 shadow-lg">
 ```mermaid
 flowchart LR
   A["自然语言 / MCP"] --> B["Planner"]
@@ -163,6 +165,8 @@ flowchart LR
   F --> G
   G --> H["可审查 / 可复用 / 可分享"]
 ```
+  </div>
+</div>
 
 ---
 layout: default
@@ -257,6 +261,8 @@ class: text-center
 
 # cwtwb 架构图
 
+<div class="mt-10 flex justify-center items-center overflow-hidden">
+  <div class="transform scale-150 origin-center bg-white/40 p-10 rounded-[40px] border border-border/50 shadow-lg">
 ```mermaid
 flowchart LR
   A["Prompt / Existing TWB / Layout JSON"] --> B["Workbook Composer"]
@@ -269,6 +275,8 @@ flowchart LR
   F --> G[".twb / .twbx"]
   G --> H["可复现 / 可验证 / 可迁移"]
 ```
+  </div>
+</div>
 
 ---
 layout: default
@@ -406,12 +414,26 @@ layout: default
       <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-foreground md:text-5xl">
         把这些能力做成在线工具平台，而不只是本地脚本。
       </h2>
+      <p class="mt-5 max-w-xl text-base leading-7 text-muted-foreground md:text-lg">
+        目标不是把命令简单搬到网页，而是把常见 BI 动作变成更顺手的在线工作台。
+        用户可以直接上传文件、选择模板、预览结果，再决定是否导出。
+      </p>
     </div>
-    <div class="mt-8 grid gap-3">
-      <div class="rounded-[20px] border border-border bg-card p-4 shadow-sm">能在线使用</div>
-      <div class="rounded-[20px] border border-border bg-card p-4 shadow-sm">能直接处理文件</div>
-      <div class="rounded-[20px] border border-border bg-card p-4 shadow-sm">能更低门槛开放给 BI 开发者</div>
-      <div class="rounded-[20px] border border-border bg-card p-4 shadow-sm">能从代码能力变成可直接点开用的工具</div>
+    <div class="mt-8 grid grid-cols-2 gap-3">
+      <div class="rounded-[18px] border border-border bg-card p-3 text-sm leading-6 shadow-sm">能在线使用</div>
+      <div class="rounded-[18px] border border-border bg-card p-3 text-sm leading-6 shadow-sm">能直接处理文件</div>
+      <div class="rounded-[18px] border border-border bg-card p-3 text-sm leading-6 shadow-sm">更低门槛开放给 BI 开发者</div>
+      <div class="rounded-[18px] border border-border bg-card p-3 text-sm leading-6 shadow-sm">从代码能力变成点开即用</div>
+    </div>
+    <div class="mt-6 rounded-[24px] border border-dashed border-primary/25 bg-primary/5 p-5 shadow-sm">
+      <div class="text-sm font-semibold text-primary">在线体验的直觉</div>
+      <div class="mt-3 flex flex-wrap gap-2 text-sm text-foreground">
+        <span class="rounded-full border border-border bg-background px-3 py-1">上传</span>
+        <span class="rounded-full border border-border bg-background px-3 py-1">解析</span>
+        <span class="rounded-full border border-border bg-background px-3 py-1">预览</span>
+        <span class="rounded-full border border-border bg-background px-3 py-1">调整</span>
+        <span class="rounded-full border border-border bg-background px-3 py-1">导出</span>
+      </div>
     </div>
   </div>
   <div class="rounded-[28px] border border-border bg-card p-7 shadow-sm">
@@ -426,6 +448,12 @@ layout: default
       <div class="rounded-[20px] border border-border bg-background p-4 shadow-sm">
         <div class="text-sm font-semibold text-primary">KPI 复制</div>
         <div class="mt-2 text-sm leading-6 text-muted-foreground">复制 KPI 工作表，并只替换局部指标，保留原结构和样式。</div>
+      </div>
+    </div>
+    <div class="mt-6 rounded-[20px] border border-dashed border-primary/25 bg-primary/5 px-5 py-4">
+      <div class="text-sm font-semibold text-primary">更长远的创想</div>
+      <div class="mt-2 text-sm leading-6 text-muted-foreground">
+        协作与版本管理可以作为未来方向来想，但它现在更像是一个创想，不是当前要承诺交付的主功能。
       </div>
     </div>
   </div>
