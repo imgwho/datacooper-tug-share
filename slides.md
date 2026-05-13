@@ -50,6 +50,40 @@ layout: fact
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+# Tableau 在数据分析全流程中的位置
+
+<div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-5">
+  <div v-click class="rounded-[22px] border border-border bg-card p-4 shadow-sm">
+    <div class="text-sm font-semibold text-primary">1. 数据接入</div>
+    <div class="mt-2 text-sm leading-6 text-muted-foreground">数据库、Excel、CSV、接口</div>
+  </div>
+  <div v-click class="rounded-[22px] border border-border bg-card p-4 shadow-sm">
+    <div class="text-sm font-semibold text-primary">2. 数据准备</div>
+    <div class="mt-2 text-sm leading-6 text-muted-foreground">清洗、转换、合并、聚合</div>
+  </div>
+  <div v-click class="rounded-[22px] border border-border bg-card p-4 shadow-sm">
+    <div class="text-sm font-semibold text-primary">3. Tableau</div>
+    <div class="mt-2 text-sm leading-6 text-muted-foreground">建模、计算、布局、可视化</div>
+  </div>
+  <div v-click class="rounded-[22px] border border-border bg-card p-4 shadow-sm">
+    <div class="text-sm font-semibold text-primary">4. 分发协作</div>
+    <div class="mt-2 text-sm leading-6 text-muted-foreground">发布、查看、评审、迭代</div>
+  </div>
+  <div v-click class="rounded-[22px] border border-border bg-card p-4 shadow-sm">
+    <div class="text-sm font-semibold text-primary">5. 反馈优化</div>
+    <div class="mt-2 text-sm leading-6 text-muted-foreground">修订数据、调整设计、重发版本</div>
+  </div>
+</div>
+
+<div class="mx-auto mt-7 max-w-4xl rounded-[24px] border border-primary/20 bg-primary/10 px-6 py-4 text-base leading-7 text-foreground shadow-sm">
+  cwprep 主要落在“数据准备”，cwtwb 主要落在“Tableau 生成与编排”，中间由 Tableau 承接分析表达。
+</div>
+
+---
 layout: section
 ---
 
@@ -112,6 +146,25 @@ layout: section
 # cwprep
 
 ---
+layout: center
+class: text-center
+---
+
+# cwprep 架构图
+
+```mermaid
+flowchart LR
+  A["自然语言 / MCP"] --> B["Planner"]
+  C["数据库 / Excel / CSV"] --> B
+  B --> D["Flow Builder"]
+  D --> E["Validator"]
+  D --> F["SQL Translator"]
+  E --> G[".tfl / .tflx"]
+  F --> G
+  G --> H["可审查 / 可复用 / 可分享"]
+```
+
+---
 layout: default
 ---
 
@@ -136,6 +189,32 @@ layout: default
 - pivot / unpivot
 - 字段清洗、类型转换、计算字段
 - 输出 `.tfl` / `.tflx`
+
+---
+layout: center
+class: text-center
+---
+
+# cwprep 适合演示的案例
+
+<div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-2">
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`demo_basic.py`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">Customer Orders Join</p>
+  </div>
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`demo_cleaning.py`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">Profitable Orders Analysis</p>
+  </div>
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`demo_aggregation.py`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">Regional Monthly Sales Analysis</p>
+  </div>
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`demo_comprehensive.py`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">Complete Sales Analysis Flow</p>
+  </div>
+</div>
 
 ---
 layout: fact
@@ -170,6 +249,26 @@ layout: section
 ---
 
 # cwtwb
+
+---
+layout: center
+class: text-center
+---
+
+# cwtwb 架构图
+
+```mermaid
+flowchart LR
+  A["Prompt / Existing TWB / Layout JSON"] --> B["Workbook Composer"]
+  A --> C["Chart Recipe Engine"]
+  A --> D["Layout Engine"]
+  B --> E["Worksheet Refactor / Migration"]
+  C --> E
+  D --> E
+  E --> F["Validation"]
+  F --> G[".twb / .twbx"]
+  G --> H["可复现 / 可验证 / 可迁移"]
+```
 
 ---
 layout: default
@@ -222,18 +321,71 @@ layout: default
 </div>
 
 ---
-layout: fact
+layout: center
+class: text-center
 ---
 
-# cwtwb 的核心定位
+<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-[1.1fr_0.9fr]">
+  <div class="flex items-start justify-center text-left">
+    <div>
+      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+        核心定位
+      </div>
+      <h2 class="mt-4 max-w-xl text-4xl font-black tracking-[-0.04em] leading-[1.1] text-foreground md:text-5xl">
+        不是聊天式分析助手，而是 workbook engineering layer。
+      </h2>
+      <p class="mt-5 max-w-lg text-lg leading-8 text-muted-foreground">
+        它把 Tableau workbook 的生成、校验、迁移和局部重构变成可重复执行的工程动作。
+      </p>
+    </div>
+  </div>
 
-## 不是聊天式分析助手，而是 workbook engineering layer
+  <div class="rounded-[28px] border border-border bg-card p-7 text-left shadow-sm">
+    <div class="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+      它的核心价值
+    </div>
+    <div class="mt-6 grid gap-4">
+      <div class="rounded-[20px] border border-border bg-background px-5 py-4 shadow-sm">
+        <div class="text-base font-semibold text-primary">确定性输出</div>
+        <div class="mt-2 text-sm leading-6 text-muted-foreground">每次生成结果都能稳定复现。</div>
+      </div>
+      <div class="rounded-[20px] border border-border bg-background px-5 py-4 shadow-sm">
+        <div class="text-base font-semibold text-primary">交付可验证</div>
+        <div class="mt-2 text-sm leading-6 text-muted-foreground">不是“看起来差不多”，而是能检查、能打开。</div>
+      </div>
+      <div class="rounded-[20px] border border-border bg-background px-5 py-4 shadow-sm">
+        <div class="text-base font-semibold text-primary">适合迁移项目</div>
+        <div class="mt-2 text-sm leading-6 text-muted-foreground">字段和数据源变化时，不必从零重建。</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-### 它的核心价值
+---
+layout: center
+class: text-center
+---
 
-- 确定性输出: 每次生成结果都能稳定复现
-- 交付可验证: 不是“看起来差不多”，而是能检查、能打开
-- 适合迁移项目: 字段和数据源变化时，不必从零重建
+# cwtwb 适合演示的案例
+
+<div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-2">
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`demo_e2e_mcp_workflow`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">canonical hello world</p>
+  </div>
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`worksheet_refactor_kpi_profit`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">KPI clone & Profit refactor</p>
+  </div>
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`migrate_workflow`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">Workbook migration workflow</p>
+  </div>
+  <div class="rounded-[24px] border border-border bg-card p-6 text-left shadow-sm">
+    <h3 class="text-xl font-bold text-foreground">`demo_declarative_layout`</h3>
+    <p class="mt-2 text-sm leading-7 text-muted-foreground">8 worksheets -> 3 dashboards</p>
+  </div>
+</div>
 
 ---
 layout: section
