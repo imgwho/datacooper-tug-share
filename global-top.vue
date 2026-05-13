@@ -185,7 +185,7 @@
   }
 
   .big-diagram .mermaid {
-    transform: scale(1.6);
+    transform: scale(2.6);
     transform-origin: center;
     display: flex;
     justify-content: center;
