@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build and Export
+dist/
+export/
+slides-export/
+*.pdf
+*.pptx
+*.png
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Debug and Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor/System
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
+
+# Slidev specific
+.slidev/
+netless/
+stats.html
+playwright-report/
+test-results/
+
+# Temporary
+_tmp_*/
+temp/
+tmp/
