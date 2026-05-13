@@ -14,7 +14,8 @@ background: "#e9e6dc"
 
 <div class="min-h-[86vh] px-8 py-10 md:px-16">
   <div class="mx-auto flex min-h-[86vh] max-w-[1180px] items-start pt-6 md:pt-10">
-    <div v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0 }" class="w-full rounded-[40px] border border-primary/10 bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),var(--card)] px-8 py-10 shadow-sm md:px-12 md:py-14">
+    <div v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0 }" class="w-full rounded-[40px] border 
+        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),var(--card)] px-8 py-10 shadow-sm md:px-12 md:py-14">
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-sm">
         Datacooper · Tableau User Group 分享
       </div>
@@ -57,23 +58,23 @@ class: text-center
 # Tableau 在数据分析全流程中的位置
 
 <div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-5">
-  <div v-click class="rounded-[22px] border border-primary/10 bg-card p-4 shadow-sm">
+  <div v-click class="rounded-[22px] border border-primary/25 bg-card p-4 shadow-sm">
     <div class="text-sm font-semibold text-primary">1. 数据接入</div>
     <div class="mt-2 text-sm leading-6 text-muted-foreground">数据库、Excel、CSV、接口</div>
   </div>
-  <div v-click class="rounded-[22px] border border-primary/10 bg-card p-4 shadow-sm">
+  <div v-click class="rounded-[22px] border border-primary/25 bg-card p-4 shadow-sm">
     <div class="text-sm font-semibold text-primary">2. 数据准备</div>
     <div class="mt-2 text-sm leading-6 text-muted-foreground">清洗、转换、合并、聚合</div>
   </div>
-  <div v-click class="rounded-[22px] border border-primary/10 bg-card p-4 shadow-sm">
+  <div v-click class="rounded-[22px] border border-primary/25 bg-card p-4 shadow-sm">
     <div class="text-sm font-semibold text-primary">3. Tableau</div>
     <div class="mt-2 text-sm leading-6 text-muted-foreground">建模、计算、布局、可视化</div>
   </div>
-  <div v-click class="rounded-[22px] border border-primary/10 bg-card p-4 shadow-sm">
+  <div v-click class="rounded-[22px] border border-primary/25 bg-card p-4 shadow-sm">
     <div class="text-sm font-semibold text-primary">4. 分发协作</div>
     <div class="mt-2 text-sm leading-6 text-muted-foreground">发布、查看、评审、迭代</div>
   </div>
-  <div v-click class="rounded-[22px] border border-primary/10 bg-card p-4 shadow-sm">
+  <div v-click class="rounded-[22px] border border-primary/25 bg-card p-4 shadow-sm">
     <div class="text-sm font-semibold text-primary">5. 反馈优化</div>
     <div class="mt-2 text-sm leading-6 text-muted-foreground">修订数据、调整设计、重发版本</div>
   </div>
@@ -95,15 +96,15 @@ class: text-center
 ---
 
 <div class="mx-auto max-w-5xl">
-  <div class="rounded-[28px] border border-primary/10 bg-card px-8 py-7 text-lg leading-8 text-muted-foreground shadow-sm">
+  <div class="rounded-[28px] border border-primary/25 bg-card px-8 py-7 text-lg leading-8 text-muted-foreground shadow-sm">
     Tableau 里最耗时的，往往不是“画一个图”，而是机械性地反复做这些事。
   </div>
 
   <div class="mt-6 grid gap-4 md:grid-cols-2">
-    <div v-click class="rounded-[22px] border border-primary/10 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复拖拽字段</div>
-    <div v-click class="rounded-[22px] border border-primary/10 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复调布局</div>
-    <div v-click class="rounded-[22px] border border-primary/10 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复复制 KPI 模块</div>
-    <div v-click class="rounded-[22px] border border-primary/10 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复迁移 workbook</div>
+    <div v-click class="rounded-[22px] border border-primary/25 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复拖拽字段</div>
+    <div v-click class="rounded-[22px] border border-primary/25 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复调布局</div>
+    <div v-click class="rounded-[22px] border border-primary/25 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复复制 KPI 模块</div>
+    <div v-click class="rounded-[22px] border border-primary/25 bg-card px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复迁移 workbook</div>
   </div>
 
   <div class="mt-6 rounded-[24px] border border-primary/20 bg-primary/10 px-6 py-5 text-base leading-7 text-foreground shadow-sm">
@@ -118,7 +119,7 @@ layout: center
 # 研发范式的改变
 
 <div class="grid grid-cols-2 gap-10 mt-10 text-left">
-  <div v-click class="p-8 border border-primary/10 rounded-[32px] bg-white/50 shadow-sm">
+  <div v-click class="p-8 border border-primary/25 rounded-[32px] bg-white/50 shadow-sm">
     <h3 class="text-2xl font-bold mb-6 text-foreground">传统方式 (Manual)</h3>
     <ul class="space-y-4 text-muted-foreground text-lg">
       <li class="flex items-start gap-3"><span>❌</span> <span>300+ 次重复的鼠标点击</span></li>
@@ -193,19 +194,19 @@ class: text-center
 # cwprep 典型案例
 
 <div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-2">
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">数据合并与连接</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">自动化处理多数据源 Join 逻辑。</p>
   </div>
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">自动化数据清洗</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">根据业务规则自动完成类型转换与过滤。</p>
   </div>
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">指标聚合计算</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">在 Prep 层预处理复杂的业务指标。</p>
   </div>
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">全流程自动化</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">从原始数据到 TFLX 文件的端到端生成。</p>
   </div>
@@ -225,15 +226,15 @@ class: text-center
 ---
 
 <div class="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
-  <div v-click class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div v-click class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">效率加速</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">把重复性的 Prep 流搭建自动化。</p>
   </div>
-  <div v-click class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div v-click class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">质量稳定</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">把常见规则固化下来，减少人工偏差。</p>
   </div>
-  <div v-click class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div v-click class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">工程协作</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">让数据清洗进入脚本、版本控制和批量生产流程。</p>
   </div>
@@ -284,19 +285,19 @@ layout: default
       </h2>
     </div>
     <div class="mt-8 grid gap-3 md:grid-cols-2">
-      <div class="rounded-[20px] border border-primary/10 bg-card p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-card p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">生成</div>
         <div class="mt-1 leading-6 text-muted-foreground">从代码或 agent 调用生成 TWB。</div>
       </div>
-      <div class="rounded-[20px] border border-primary/10 bg-card p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-card p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">校验</div>
         <div class="mt-1 leading-6 text-muted-foreground">结构校验 + XSD 校验。</div>
       </div>
-      <div class="rounded-[20px] border border-primary/10 bg-card p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-card p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">迁移</div>
         <div class="mt-1 leading-6 text-muted-foreground">快速迁移到新数据源。</div>
       </div>
-      <div class="rounded-[20px] border border-primary/10 bg-card p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-card p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">编排</div>
         <div class="mt-1 leading-6 text-muted-foreground">支持 Chart、Layout 等编排。</div>
       </div>
@@ -311,10 +312,10 @@ layout: default
       cwtwb 管的是“仪表板怎么生成”。
     </p>
     <div class="mt-6 grid gap-3 md:grid-cols-2">
-      <div class="rounded-[18px] border border-primary/10 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可复现</div>
-      <div class="rounded-[18px] border border-primary/10 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可验证</div>
-      <div class="rounded-[18px] border border-primary/10 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可迁移</div>
-      <div class="rounded-[18px] border border-primary/10 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可编排</div>
+      <div class="rounded-[18px] border border-primary/25 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可复现</div>
+      <div class="rounded-[18px] border border-primary/25 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可验证</div>
+      <div class="rounded-[18px] border border-primary/25 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可迁移</div>
+      <div class="rounded-[18px] border border-primary/25 bg-background px-4 py-3 text-sm text-foreground shadow-sm">可编排</div>
     </div>
   </div>
 </div>
@@ -344,15 +345,15 @@ class: text-center
       它的核心价值
     </div>
     <div class="mt-6 grid gap-4">
-      <div class="rounded-[20px] border border-primary/10 bg-background px-5 py-4 shadow-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-background px-5 py-4 shadow-sm">
         <div class="text-base font-semibold text-primary">确定性输出</div>
         <div class="mt-2 text-sm leading-6 text-muted-foreground">结果稳定复现。</div>
       </div>
-      <div class="rounded-[20px] border border-primary/10 bg-background px-5 py-4 shadow-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-background px-5 py-4 shadow-sm">
         <div class="text-base font-semibold text-primary">交付可验证</div>
         <div class="mt-2 text-sm leading-6 text-muted-foreground">能检查，能打开。</div>
       </div>
-      <div class="rounded-[20px] border border-primary/10 bg-background px-5 py-4 shadow-sm">
+      <div class="rounded-[20px] border border-primary/25 bg-background px-5 py-4 shadow-sm">
         <div class="text-base font-semibold text-primary">适合迁移项目</div>
         <div class="mt-2 text-sm leading-6 text-muted-foreground">无需从零重建。</div>
       </div>
@@ -368,19 +369,19 @@ class: text-center
 # cwtwb 典型案例
 
 <div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-2">
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">端到端自动化生成</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">从代码一键生成完整的 TWBX 文件。</p>
   </div>
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">工作表局部重构</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">只替换特定的 KPI 指标，保留原始排版。</p>
   </div>
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">跨环境数据源迁移</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">快速适配测试环境与生产环境的数据源变更。</p>
   </div>
-  <div class="rounded-[24px] border border-primary/10 bg-card p-6 text-left shadow-sm">
+  <div class="rounded-[24px] border border-primary/25 bg-card p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">声明式布局管理</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">用 JSON 定义仪表板布局，批量生成看板。</p>
   </div>
