@@ -184,6 +184,19 @@
     color: #000 !important;
   }
 
+  .big-diagram .mermaid {
+    transform: scale(1.6);
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+
+  .big-diagram .mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
   .slidev-layout h2,
   .slidev-layout h3,
   .slidev-layout h4 {
