@@ -1,0 +1,1 @@
+import{B as e,L as t,g as n,y as r}from"../modules/shiki-BYY7Vn19.js";import{n as i}from"./context-BMSvxEJ-.js";var a={class:`slidev-layout fact`},o={class:`my-auto`},s={__name:`fact`,setup(s){let{$slidev:c,$nav:l,$clicksContext:u,$clicks:d,$page:f,$renderContext:p,$frontmatter:m}=i();return(i,s)=>(t(),r(`div`,a,[n(`div`,o,[e(i.$slots,`default`)])]))}};export{s as t};
