@@ -12,10 +12,10 @@ mdc: true
 background: "#e9e6dc"
 ---
 
-<div class="min-h-[86vh] px-8 py-10 md:px-16">
-  <div class="mx-auto flex min-h-[86vh] max-w-[1180px] items-start pt-6 md:pt-10">
+<div class="min-h-[80vh] px-8 py-6 md:px-16">
+  <div class="mx-auto flex min-h-[80vh] max-w-[1180px] items-start pt-4 md:pt-6">
     <div v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0 }" class="w-full rounded-[40px] border border-primary/50 
-        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),rgba(255,255,255,0.5)] px-8 py-10 shadow-sm md:px-12 md:py-14">
+        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),rgba(255,255,255,0.5)] px-8 py-8 shadow-sm md:px-12 md:py-10">
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-sm">
         Datacooper · Tableau User Group Sharing
       </div>
