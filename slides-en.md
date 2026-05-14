@@ -19,15 +19,15 @@ background: "#e9e6dc"
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-sm">
         Datacooper · Tableau User Group Sharing
       </div>
-      <h1 class="mt-6 max-w-5xl text-5xl font-black tracking-[-0.05em] leading-[0.94] text-primary md:text-7xl">
+      <h1 class="mt-4 max-w-5xl text-5xl font-black tracking-[-0.05em] leading-[0.94] text-primary md:text-6xl">
         From Manual Dragging to Engineering BI
       </h1>
-      <p class="mt-6 max-w-4xl text-lg leading-8 text-muted-foreground md:text-2xl md:leading-relaxed">
+      <p class="mt-4 max-w-4xl text-base leading-7 text-muted-foreground md:text-xl md:leading-relaxed">
         <strong class="text-foreground">cwprep</strong> automates Tableau Prep flows, 
         <strong class="text-foreground">cwtwb</strong> handles engineering generation of Tableau Workbooks, 
         <strong class="text-foreground">datacooper.com</strong> builds these into user-friendly online tools.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
+      <div class="mt-6 flex flex-wrap gap-2">
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Python Tools = BI Development Accelerator</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">MCP</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Repeatable</span>
@@ -274,48 +274,48 @@ flowchart LR
 layout: default
 ---
 
-<div class="grid min-h-[78vh] grid-cols-1 gap-8" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
         One Goal
       </div>
-      <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-foreground md:text-5xl">
+      <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
         Turning Tableau workbooks into repeatable, verifiable, and migratable assets.
       </h2>
     </div>
-    <div class="mt-8 grid gap-3 md:grid-cols-2">
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+    <div class="mt-4 grid gap-2 md:grid-cols-2">
+      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm text-xs">
         <div class="font-semibold text-primary">Generation</div>
-        <div class="mt-1 leading-6 text-muted-foreground">Generate TWB from code or agent calls.</div>
+        <div class="mt-1 leading-5 text-muted-foreground">Generate TWB from code or agent calls.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm text-xs">
         <div class="font-semibold text-primary">Validation</div>
-        <div class="mt-1 leading-6 text-muted-foreground">Structural + XSD validation.</div>
+        <div class="mt-1 leading-5 text-muted-foreground">Structural + XSD validation.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm text-xs">
         <div class="font-semibold text-primary">Migration</div>
-        <div class="mt-1 leading-6 text-muted-foreground">Rapidly migrate to new data sources.</div>
+        <div class="mt-1 leading-5 text-muted-foreground">Rapidly migrate to new data sources.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm text-xs">
         <div class="font-semibold text-primary">Orchestration</div>
-        <div class="mt-1 leading-6 text-muted-foreground">Manage Charts and Layouts.</div>
+        <div class="mt-1 leading-5 text-muted-foreground">Manage Charts and Layouts.</div>
       </div>
     </div>
   </div>
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 shadow-sm">
+  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
     <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
       Key Difference
     </div>
-    <p class="mt-5 text-lg leading-8 text-muted-foreground">
+    <p class="mt-4 text-base leading-7 text-muted-foreground">
       cwprep manages "How data flows",<br>
       cwtwb manages "How dashboards are built".
     </p>
-    <div class="mt-6 grid gap-3 md:grid-cols-2">
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">Repeatable</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">Verifiable</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">Migratable</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">Orchestrable</div>
+    <div class="mt-4 grid gap-2 md:grid-cols-2">
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Repeatable</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Verifiable</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Migratable</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Orchestrable</div>
     </div>
   </div>
 </div>
@@ -397,60 +397,57 @@ layout: section
 layout: default
 ---
 
-<div class="grid min-h-[78vh] grid-cols-1 gap-8" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
         Future Direction
       </div>
-      <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-foreground md:text-5xl">
+      <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
         Building an online platform, not just local scripts.
       </h2>
-      <p class="mt-5 max-w-xl text-base leading-7 text-muted-foreground md:text-lg">
+      <p class="mt-3 max-w-xl text-sm leading-6 text-muted-foreground md:text-base">
         Not just wrapping commands in a UI, but turning BI tasks into a natural online workflow.
         Powered by our Python SDK under the hood.
       </p>
     </div>
-    <div class="mt-8 grid grid-cols-2 gap-3">
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Online Access</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Direct File Processing</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Low Entry Barrier</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Code-to-Tool Transformation</div>
+    <div class="mt-4 grid grid-cols-2 gap-2">
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Online Access</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Direct File Processing</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Low Entry Barrier</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Code-to-Tool Transformation</div>
     </div>
-    <div class="mt-6 rounded-[24px] border border-dashed border-primary/50 bg-white/50 p-5 shadow-sm">
-      <div class="text-sm font-semibold text-primary">The Intuitive Workflow</div>
-      <div class="mt-3 flex flex-wrap gap-2 text-sm text-foreground">
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">Upload</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">Parse</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">Preview</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">Adjust</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">Export</span>
+    <div class="mt-4 rounded-[24px] border border-dashed border-primary/50 bg-white/50 p-4 shadow-sm">
+      <div class="text-xs font-semibold text-primary">The Intuitive Workflow</div>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs text-foreground">
+        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Upload</span>
+        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Parse</span>
+        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Preview</span>
+        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Adjust</span>
+        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Export</span>
       </div>
     </div>
-    <div class="mt-4 text-sm leading-6 text-muted-foreground">
-      Focusing on natural BI workflows rather than just exposing SDK functions.
-    </div>
   </div>
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 shadow-sm">
+  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
     <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
       Available Prototypes
     </div>
-    <div class="mt-4 text-sm leading-6 text-muted-foreground">
+    <div class="mt-3 text-xs leading-5 text-muted-foreground">
       Current tools already cover two practical directions for platform evolution.
     </div>
-    <div class="mt-6 space-y-4">
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
-        <div class="text-sm font-semibold text-primary">Layout Parsing</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">Extracting dashboard structures and exporting to JSON.</div>
+    <div class="mt-4 space-y-3">
+      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm">
+        <div class="text-xs font-semibold text-primary">Layout Parsing</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Extracting dashboard structures and exporting to JSON.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
-        <div class="text-sm font-semibold text-primary">KPI Cloning</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">Cloning KPI sheets with metric swapping while preserving styles.</div>
+      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm">
+        <div class="text-xs font-semibold text-primary">KPI Cloning</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Cloning KPI sheets with metric swapping while preserving styles.</div>
       </div>
     </div>
-    <div class="mt-6 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-5 py-4">
-      <div class="text-sm font-semibold text-primary">Long-term Vision</div>
-      <div class="mt-2 text-sm leading-6 text-muted-foreground">
+    <div class="mt-4 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-4 py-3">
+      <div class="text-xs font-semibold text-primary">Long-term Vision</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">
         Collaboration and version management are conceptual directions for future growth.
       </div>
     </div>

@@ -12,22 +12,22 @@ mdc: true
 background: "#e9e6dc"
 ---
 
-<div class="min-h-[86vh] px-8 py-10 md:px-16">
-  <div class="mx-auto flex min-h-[86vh] max-w-[1180px] items-start pt-6 md:pt-10">
+<div class="min-h-[80vh] px-8 py-6 md:px-16">
+  <div class="mx-auto flex min-h-[80vh] max-w-[1180px] items-start pt-4 md:pt-6">
     <div v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0 }" class="w-full rounded-[40px] border border-primary/50 
-        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),rgba(255,255,255,0.5)] px-8 py-10 shadow-sm md:px-12 md:py-14">
+        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),rgba(255,255,255,0.5)] px-8 py-8 shadow-sm md:px-12 md:py-10">
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-sm">
         Datacooper · Tableau User Group 分享
       </div>
-      <h1 class="mt-6 max-w-5xl text-5xl font-black tracking-[-0.05em] leading-[0.94] text-primary md:text-7xl">
+      <h1 class="mt-4 max-w-5xl text-5xl font-black tracking-[-0.05em] leading-[0.94] text-primary md:text-6xl">
         从手工拖拽到工程化 BI
       </h1>
-      <p class="mt-6 max-w-4xl text-lg leading-8 text-muted-foreground md:text-2xl md:leading-relaxed">
+      <p class="mt-4 max-w-4xl text-base leading-7 text-muted-foreground md:text-xl md:leading-relaxed">
         <strong class="text-foreground">cwprep</strong> 负责 Tableau Prep 的数据流自动化，
         <strong class="text-foreground">cwtwb</strong> 负责 Tableau Workbook 的工程化生成，
         <strong class="text-foreground">datacooper.com</strong> 则把这些能力做成更容易使用的在线工具平台。
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
+      <div class="mt-6 flex flex-wrap gap-2">
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Python 工具 = BI 开发加速器</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">MCP</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可复现</span>
@@ -274,17 +274,17 @@ flowchart LR
 layout: default
 ---
 
-<div class="grid min-h-[78vh] grid-cols-1 gap-8" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
         一句话
       </div>
-      <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-foreground md:text-5xl">
+      <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
         把 Tableau workbook 变成可复现、可验证、可迁移的工程产物。
       </h2>
     </div>
-    <div class="mt-8 grid gap-3 md:grid-cols-2">
+    <div class="mt-4 grid gap-2 md:grid-cols-2">
       <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">生成</div>
         <div class="mt-1 leading-6 text-muted-foreground">从代码或 agent 调用生成 TWB。</div>
@@ -397,13 +397,13 @@ layout: section
 layout: default
 ---
 
-<div class="grid min-h-[78vh] grid-cols-1 gap-8" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
         未来方向
       </div>
-      <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-foreground md:text-5xl">
+      <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
         把这些能力做成在线工具平台，而不只是本地脚本。
       </h2>
       <p class="mt-5 max-w-xl text-base leading-7 text-muted-foreground md:text-lg">
@@ -411,7 +411,7 @@ layout: default
         底层共用 Python SDK，前台则把能力包装成更容易使用的在线体验。
       </p>
     </div>
-    <div class="mt-8 grid grid-cols-2 gap-3">
+    <div class="mt-4 grid grid-cols-2 gap-2">
       <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">能在线使用</div>
       <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">能直接处理文件</div>
       <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">更低门槛开放给 BI 开发者</div>
