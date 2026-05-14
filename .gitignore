@@ -3,6 +3,7 @@ node_modules/
 
 # Build and Export
 dist/
+dist-local/
 export/
 slides-export/
 *.pdf

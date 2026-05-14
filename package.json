@@ -3,8 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build",
+    "dev": "slidev slides.md --open",
+    "dev:en": "slidev slides-en.md --open",
+    "build": "npm run build:cn && npm run build:en",
+    "build:cn": "slidev build slides.md --out dist --base /datacooper-tug-share/",
+    "build:en": "slidev build slides-en.md --out dist/en --base /datacooper-tug-share/en/",
+    "preview:build": "npm run preview:build:cn && npm run preview:build:en",
+    "preview:build:cn": "slidev build slides.md --out dist-local --base /",
+    "preview:build:en": "slidev build slides-en.md --out dist-local/en --base /en/",
+    "preview": "npx serve dist-local",
     "export": "slidev export"
   },
   "dependencies": {

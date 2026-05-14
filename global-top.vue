@@ -1,6 +1,30 @@
 <template>
-  <div />
+  <div class="fixed bottom-6 right-6 z-50 flex gap-2">
+    <a 
+      v-if="isEn"
+      href="../" 
+      class="flex h-10 items-center justify-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 text-xs font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95"
+    >
+      <span class="text-base">🇨🇳</span> 中文版
+    </a>
+    <a 
+      v-else
+      href="en/" 
+      class="flex h-10 items-center justify-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 text-xs font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95"
+    >
+      <span class="text-base">🇺🇸</span> English
+    </a>
+  </div>
 </template>
+
+<script setup>
+import { computed } from 'vue'
+
+const isEn = computed(() => {
+  if (typeof window === 'undefined') return false
+  return window.location.pathname.includes('/en/')
+})
+</script>
 
 <style>
 :root {
