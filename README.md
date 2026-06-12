@@ -4,6 +4,23 @@ This repository contains the slides for the Tableau User Group sharing session a
 
 ---
 
+## Live Preview (Online)
+
+- **English Version**: [https://imgwho.github.io/datacooper-tug-share/en](https://imgwho.github.io/datacooper-tug-share/en)
+- **中文版**: [https://imgwho.github.io/datacooper-tug-share/](https://imgwho.github.io/datacooper-tug-share/)
+
+## How to Preview (Locally)
+
+```bash
+# Preview Chinese Version
+npm run dev
+
+# Preview English Version
+npm run dev:en
+```
+
+---
+
 ## Presentation Outline (English)
 
 ### 1. Introduction: Positioning & Goals
@@ -74,12 +91,3 @@ This repository contains the slides for the Tableau User Group sharing session a
 
 ---
 
-## How to Preview
-
-```bash
-# Preview Chinese Version
-npm run dev
-
-# Preview English Version
-npm run dev:en
-```
