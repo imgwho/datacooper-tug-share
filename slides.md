@@ -28,7 +28,7 @@ background: "#e9e6dc"
         <strong class="text-foreground">datacooper.com</strong> 则把这些能力做成更容易使用的在线工具平台。
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Python 工具 = BI 开发加速器</span>
+        <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">cwtwb/cwprep = BI 开发加速器</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">MCP</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可复现</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可审查</span>
@@ -42,7 +42,7 @@ background: "#e9e6dc"
 layout: fact
 ---
 
-# Python 工具的定位
+# cwtwb/cwprep 工具的定位
 
 ## 辅助加速 BI 开发过程
 
@@ -151,17 +151,17 @@ class: text-center
 
 <div class="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
-    <div class="text-2xl">📊</div>
+    <!-- <div class="text-2xl">📊</div> -->
     <h3 class="mt-2 text-lg font-bold text-foreground">Tableau 分析师</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">减少重复拖拽和复制粘贴，把时间还给业务分析和洞察判断。</p>
   </div>
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
-    <div class="text-2xl">⚙️</div>
+    <!-- <div class="text-2xl">⚙️</div> -->
     <h3 class="mt-2 text-lg font-bold text-foreground">数据工程 / IT</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">自动化、版本控制、批量部署，让 BI 进入工程化流程。</p>
   </div>
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
-    <div class="text-2xl">📋</div>
+    <!-- <div class="text-2xl">📋</div> -->
     <h3 class="mt-2 text-lg font-bold text-foreground">团队管理者</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">可审计、可复现、可交付，降低人员依赖和知识流失风险。</p>
   </div>
@@ -255,6 +255,8 @@ layout: center
 class: text-center
 ---
 
+# cwprep 的核心价值
+
 <div class="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">效率加速</h3>
@@ -324,15 +326,15 @@ class: text-center
 
 ```mermaid
 flowchart LR
-  A["Natural Language / TWB / Layout JSON"] --> B["Workbook Composer"]
+  A["自然语言 / TWB / 布局 JSON"] --> B["Workbook Composer"]
   A --> C["Chart Recipe Engine"]
   A --> D["Layout Engine"]
-  B --> E["Refactor / Migration"]
+  B --> E["工作表重构 / 迁移"]
   C --> E
   D --> E
-  E --> F["Validation"]
+  E --> F["校验"]
   F --> G[".twb / .twbx"]
-  G --> H["Repeatable / Verifiable / Migratable"]
+  G --> H["可复现 / 可验证 / 可迁移"]
 ```
 
 </div>
@@ -341,7 +343,7 @@ flowchart LR
 layout: default
 ---
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">

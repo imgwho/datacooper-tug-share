@@ -28,7 +28,7 @@ background: "#e9e6dc"
         <strong class="text-foreground">datacooper.com</strong> builds these into user-friendly online tools.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Python Tools = BI Development Accelerator</span>
+        <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">cwtwb/cwprep = BI Development Accelerator</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">MCP</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Repeatable</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Auditable</span>
@@ -42,7 +42,7 @@ background: "#e9e6dc"
 layout: fact
 ---
 
-# Positioning of Python Tools
+# Positioning of cwtwb/cwprep
 
 ## Accelerating the BI Development Process
 
@@ -151,17 +151,17 @@ class: text-center
 
 <div class="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
-    <div class="text-2xl">📊</div>
+    <!-- <div class="text-2xl">📊</div> -->
     <h3 class="mt-2 text-lg font-bold text-foreground">Tableau Analysts</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">Less repetitive dragging and copying — more time for insights and business judgment.</p>
   </div>
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
-    <div class="text-2xl">⚙️</div>
+    <!-- <div class="text-2xl">⚙️</div> -->
     <h3 class="mt-2 text-lg font-bold text-foreground">Data Engineering / IT</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">Automation, version control, and batch deployment — bringing BI into engineering workflows.</p>
   </div>
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
-    <div class="text-2xl">📋</div>
+    <!-- <div class="text-2xl">📋</div> -->
     <h3 class="mt-2 text-lg font-bold text-foreground">Team Leads / Managers</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">Auditable, repeatable deliverables — reducing key-person dependency and knowledge loss.</p>
   </div>
@@ -255,6 +255,8 @@ layout: center
 class: text-center
 ---
 
+# Core Value of cwprep
+
 <div class="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <h3 class="text-xl font-bold text-foreground">Efficiency</h3>
@@ -324,7 +326,7 @@ class: text-center
 
 ```mermaid
 flowchart LR
-  A["Prompt / Existing TWB / Layout JSON"] --> B["Workbook Composer"]
+  A["Natural Language / TWB / Layout JSON"] --> B["Workbook Composer"]
   A --> C["Chart Recipe Engine"]
   A --> D["Layout Engine"]
   B --> E["Worksheet Refactor / Migration"]
