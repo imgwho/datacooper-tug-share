@@ -513,4 +513,4 @@ class: text-center
 layout: quote
 ---
 
-# We're not trying to pull people away from Tableau — we're helping people spend their time where it truly matters.
+# Don't leave Tableau. Let AI give time back to humans.
