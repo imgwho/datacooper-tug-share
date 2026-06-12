@@ -34,6 +34,9 @@ background: "#e9e6dc"
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Auditable</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Migratable</span>
       </div>
+      <div v-click class="mt-4 rounded-[16px] border border-primary/30 bg-white/30 px-4 py-2 text-xs leading-5 text-muted-foreground">
+        MCP (Model Context Protocol) is an open standard for AI tool interoperability — think of it as a <strong class="text-foreground">USB port for AI</strong>. Any MCP-compatible client like Claude, Cursor, or Gemini can call our tools directly.
+      </div>
     </div>
   </div>
 </div>
@@ -141,6 +144,31 @@ layout: center
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+# Who Is This For?
+
+<div class="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-2xl">📊</div>
+    <h3 class="mt-2 text-lg font-bold text-foreground">Tableau Analysts</h3>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">Less repetitive dragging and copying — more time for insights and business judgment.</p>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-2xl">⚙️</div>
+    <h3 class="mt-2 text-lg font-bold text-foreground">Data Engineering / IT</h3>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">Automation, version control, and batch deployment — bringing BI into engineering workflows.</p>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-2xl">📋</div>
+    <h3 class="mt-2 text-lg font-bold text-foreground">Team Leads / Managers</h3>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">Auditable, repeatable deliverables — reducing key-person dependency and knowledge loss.</p>
+  </div>
+</div>
+
+---
 layout: section
 ---
 
@@ -185,6 +213,13 @@ Input one sentence, output a usable Tableau Prep `.tfl` / `.tflx` file.
 - MCP Integration: Works with Claude, Gemini, Cursor
 - Avoid GUI Dependency: Build flows without opening Tableau Prep
 - Auditable: Translates flows to SQL for DBA/Compliance review
+
+<div class="mt-4 flex flex-wrap gap-3">
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">22 Flow Operations</span>
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">4 Databases</span>
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">SQL Translation</span>
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">TFLX Packaging</span>
+</div>
 
 ---
 layout: center
@@ -238,6 +273,43 @@ class: text-center
     <h3 class="text-xl font-bold text-foreground">Collaboration</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">Brings data cleaning into scripts and version control.</p>
   </div>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# cwprep vs Tableau Agent
+
+<div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <h3 class="text-lg font-bold text-foreground">Tableau Agent</h3>
+    <ul class="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
+      <li>Closed-source, official product</li>
+      <li>Natural language driven Prep flows</li>
+      <li>Tableau Cloud only</li>
+      <li>No Join / Union support</li>
+      <li>No SQL export</li>
+    </ul>
+  </div>
+  <div class="flex items-center justify-center">
+    <div class="text-2xl font-black text-primary">VS</div>
+  </div>
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-md">
+    <h3 class="text-lg font-bold text-primary">cwprep</h3>
+    <ul class="mt-3 space-y-2 text-sm leading-6 text-foreground font-medium">
+      <li>Open-source, self-hosted</li>
+      <li>Natural language + code dual mode</li>
+      <li>Any environment</li>
+      <li class="text-primary font-bold">✅ Join / Union / Pivot</li>
+      <li class="text-primary font-bold">✅ Flow → SQL Translation</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mx-auto mt-5 max-w-3xl rounded-[20px] border border-primary/50 bg-white/50 px-5 py-3 text-sm leading-6 text-foreground shadow-sm">
+  <strong class="text-primary">88%</strong> feature coverage, plus exclusive Join, Union, and SQL translation capabilities.
 </div>
 
 ---
@@ -301,6 +373,12 @@ layout: default
         <div class="font-semibold text-primary">Orchestration</div>
         <div class="mt-1 leading-5 text-muted-foreground">Manage Charts and Layouts.</div>
       </div>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">15+ Chart Types</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">50+ MCP Tools</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">XSD Validation</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">Declarative Layout</span>
     </div>
   </div>
   <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
@@ -455,7 +533,35 @@ layout: default
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+# Try It Out
+
+<div class="mx-auto mt-6 max-w-3xl text-left">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm">
+    <div class="font-mono text-base leading-8 text-foreground">
+      <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
+      <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
+      <div class="mt-2"><span class="text-muted-foreground">$</span> uvx cwtwb <span class="text-xs text-muted-foreground"># start MCP server</span></div>
+    </div>
+  </div>
+  <div class="mt-4 grid gap-3 md:grid-cols-2">
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm">
+      <div class="text-sm font-semibold text-primary">GitHub</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">github.com/imgwho/cwprep<br>github.com/imgwho/cwtwb</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm">
+      <div class="text-sm font-semibold text-primary">datacooper.com</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">Online Tools · Docs · Community</div>
+    </div>
+  </div>
+  <div class="mt-4 text-sm text-muted-foreground">Open Source · AGPL-3.0 · Star, Try, and Feedback Welcome</div>
+</div>
+
+---
 layout: quote
 ---
 
-# Transforming Tableau development from craftsmanship into an engineering workflow.
+# We're not trying to pull people away from Tableau — we're helping people spend their time where it truly matters.

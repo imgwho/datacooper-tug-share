@@ -34,6 +34,9 @@ background: "#e9e6dc"
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可审查</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可迁移</span>
       </div>
+      <div v-click class="mt-4 rounded-[16px] border border-primary/30 bg-white/30 px-4 py-2 text-xs leading-5 text-muted-foreground">
+        MCP（Model Context Protocol）是一个让 AI 工具互相调用的开放协议，你可以理解成 <strong class="text-foreground">AI 的 USB 接口</strong> —— 只要支持这个协议，Claude、Cursor、Gemini 等客户端都能直接调用我们的工具。
+      </div>
     </div>
   </div>
 </div>
@@ -141,6 +144,31 @@ layout: center
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+# 这些工具适合谁
+
+<div class="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-2xl">📊</div>
+    <h3 class="mt-2 text-lg font-bold text-foreground">Tableau 分析师</h3>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">减少重复拖拽和复制粘贴，把时间还给业务分析和洞察判断。</p>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-2xl">⚙️</div>
+    <h3 class="mt-2 text-lg font-bold text-foreground">数据工程 / IT</h3>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">自动化、版本控制、批量部署，让 BI 进入工程化流程。</p>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-2xl">📋</div>
+    <h3 class="mt-2 text-lg font-bold text-foreground">团队管理者</h3>
+    <p class="mt-2 text-sm leading-6 text-muted-foreground">可审计、可复现、可交付，降低人员依赖和知识流失风险。</p>
+  </div>
+</div>
+
+---
 layout: section
 ---
 
@@ -185,6 +213,13 @@ layout: default
 - MCP 集成: 可接 Claude、Gemini、Cursor 等客户端
 - 避免 GUI 依赖: 不用每次打开 Tableau Prep 也能构建流程
 - 可审查: 支持把 flow 翻译成 SQL，便于 DBA / 合规查看
+
+<div class="mt-4 flex flex-wrap gap-3">
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">22 种数据流操作</span>
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">4 种数据库</span>
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">SQL 翻译</span>
+  <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">TFLX 打包</span>
+</div>
 
 ---
 layout: center
@@ -238,6 +273,43 @@ class: text-center
     <h3 class="text-xl font-bold text-foreground">工程协作</h3>
     <p class="mt-2 text-sm leading-7 text-muted-foreground">让数据清洗进入脚本、版本控制和批量生产流程。</p>
   </div>
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# cwprep vs Tableau Agent
+
+<div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <h3 class="text-lg font-bold text-foreground">Tableau Agent</h3>
+    <ul class="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
+      <li>官方闭源产品</li>
+      <li>自然语言驱动 Prep 流</li>
+      <li>仅限 Tableau Cloud</li>
+      <li>不支持 Join / Union</li>
+      <li>不支持 SQL 导出</li>
+    </ul>
+  </div>
+  <div class="flex items-center justify-center">
+    <div class="text-2xl font-black text-primary">VS</div>
+  </div>
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-md">
+    <h3 class="text-lg font-bold text-primary">cwprep</h3>
+    <ul class="mt-3 space-y-2 text-sm leading-6 text-foreground font-medium">
+      <li>开源，可本地部署</li>
+      <li>自然语言 + 代码双驱动</li>
+      <li>支持任意环境</li>
+      <li class="text-primary font-bold">✅ Join / Union / Pivot</li>
+      <li class="text-primary font-bold">✅ Flow → SQL 翻译</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mx-auto mt-5 max-w-3xl rounded-[20px] border border-primary/50 bg-white/50 px-5 py-3 text-sm leading-6 text-foreground shadow-sm">
+  功能覆盖率达 <strong class="text-primary">88%</strong>，并独享 Join、Union、SQL 翻译等能力。
 </div>
 
 ---
@@ -301,6 +373,12 @@ layout: default
         <div class="font-semibold text-primary">编排</div>
         <div class="mt-1 leading-6 text-muted-foreground">支持 Chart、Layout 等编排。</div>
       </div>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-2">
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">15+ 图表类型</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">50+ MCP 工具</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">XSD 校验</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">声明式布局</span>
     </div>
   </div>
   <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 shadow-sm">
@@ -458,7 +536,35 @@ layout: default
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+# 试试看
+
+<div class="mx-auto mt-6 max-w-3xl text-left">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm">
+    <div class="font-mono text-base leading-8 text-foreground">
+      <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
+      <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
+      <div class="mt-2"><span class="text-muted-foreground">$</span> uvx cwtwb <span class="text-xs text-muted-foreground"># 启动 MCP 服务器</span></div>
+    </div>
+  </div>
+  <div class="mt-4 grid gap-3 md:grid-cols-2">
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm">
+      <div class="text-sm font-semibold text-primary">GitHub</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">github.com/imgwho/cwprep<br>github.com/imgwho/cwtwb</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm">
+      <div class="text-sm font-semibold text-primary">datacooper.com</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">在线工具 · 文档 · 社区</div>
+    </div>
+  </div>
+  <div class="mt-4 text-sm text-muted-foreground">开源 · AGPL-3.0 · 欢迎 Star、试用、反馈</div>
+</div>
+
+---
 layout: quote
 ---
 
-# 让 Tableau 开发从手艺活，变成工程化工作流。
+# 我们不是要让人离开 Tableau，而是要让人把时间花在真正重要的地方。
