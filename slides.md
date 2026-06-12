@@ -34,9 +34,6 @@ background: "#e9e6dc"
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可审查</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">可迁移</span>
       </div>
-      <div v-click class="mt-4 rounded-[16px] border border-primary/30 bg-white/30 px-4 py-2 text-xs leading-5 text-muted-foreground">
-        MCP（Model Context Protocol）是一个让 AI 工具互相调用的开放协议，你可以理解成 <strong class="text-foreground">AI 的 USB 接口</strong> —— 只要支持这个协议，Claude、Cursor、Gemini 等客户端都能直接调用我们的工具。
-      </div>
     </div>
   </div>
 </div>
@@ -103,11 +100,13 @@ class: text-center
     Tableau 里最耗时的，往往不是“画一个图”，而是机械性地反复做这些事。
   </div>
 
-  <div class="mt-6 grid gap-4 md:grid-cols-2">
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复拖拽字段</div>
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复调布局</div>
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复复制 KPI 模块</div>
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复迁移 workbook</div>
+    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复检查文件能否正常打开</div>
+    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">反复修细碎但耗时的问题</div>
   </div>
 
   <div class="mt-6 rounded-[24px] border border-primary/50 bg-white/50 px-6 py-5 text-base leading-7 text-foreground shadow-sm">
@@ -214,6 +213,10 @@ layout: default
 - 避免 GUI 依赖: 不用每次打开 Tableau Prep 也能构建流程
 - 可审查: 支持把 flow 翻译成 SQL，便于 DBA / 合规查看
 
+<div class="mt-3 rounded-[14px] border border-primary/30 bg-white/30 px-3 py-2 text-xs leading-5 text-muted-foreground">
+  MCP（Model Context Protocol）是让 AI 工具互相调用的开放协议，可以理解为 <strong class="text-foreground">AI 的 USB 接口</strong>
+</div>
+
 <div class="mt-4 flex flex-wrap gap-3">
   <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">22 种数据流操作</span>
   <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">4 种数据库</span>
@@ -246,14 +249,6 @@ class: text-center
     <p class="mt-2 text-sm leading-7 text-muted-foreground">从原始数据到 TFLX 文件的端到端生成。</p>
   </div>
 </div>
-
----
-layout: fact
----
-
-# cwprep 的价值
-
-## 让 Prep 流生成、修改、审查都变成工程动作
 
 ---
 layout: center
@@ -329,15 +324,15 @@ class: text-center
 
 ```mermaid
 flowchart LR
-  A["Prompt / Existing TWB / Layout JSON"] --> B["Workbook Composer"]
+  A["Natural Language / TWB / Layout JSON"] --> B["Workbook Composer"]
   A --> C["Chart Recipe Engine"]
   A --> D["Layout Engine"]
-  B --> E["Worksheet Refactor / Migration"]
+  B --> E["Refactor / Migration"]
   C --> E
   D --> E
   E --> F["Validation"]
   F --> G[".twb / .twbx"]
-  G --> H["可复现 / 可验证 / 可迁移"]
+  G --> H["Repeatable / Verifiable / Migratable"]
 ```
 
 </div>
@@ -346,7 +341,7 @@ flowchart LR
 layout: default
 ---
 
-<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-2 gap-4">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
@@ -381,59 +376,25 @@ layout: default
       <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">声明式布局</span>
     </div>
   </div>
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 shadow-sm">
+  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
     <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-      你可以理解成
+      核心价值
     </div>
-    <p class="mt-5 text-lg leading-8 text-muted-foreground">
-      cwprep 管的是“数据怎么流动”，<br>
-      cwtwb 管的是“仪表板怎么生成”。
+    <p class="mt-3 text-sm leading-6 text-muted-foreground">
+      cwprep 管"数据怎么流动"，cwtwb 管"仪表板怎么生成"。
     </p>
-    <div class="mt-6 grid gap-3 md:grid-cols-2">
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">可复现</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">可验证</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">可迁移</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 text-sm text-foreground shadow-sm">可编排</div>
-    </div>
-  </div>
-</div>
-
----
-layout: center
-class: text-center
----
-
-<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-[1.1fr_0.9fr]">
-  <div class="flex items-start justify-center text-left">
-    <div>
-      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-        核心定位
+    <div class="mt-3 grid gap-2">
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">确定性输出</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">结果稳定复现。</div>
       </div>
-      <h2 class="mt-4 max-w-xl text-4xl font-black tracking-[-0.04em] leading-[1.1] text-foreground md:text-5xl">
-        Workbook engineering layer。
-      </h2>
-      <p class="mt-5 max-w-lg text-lg leading-8 text-muted-foreground">
-        它把 Tableau workbook 的生成、校验、迁移和局部重构变成可重复执行的工程动作。
-      </p>
-    </div>
-  </div>
-
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 text-left shadow-sm">
-    <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-      它的核心价值
-    </div>
-    <div class="mt-6 grid gap-4">
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
-        <div class="text-base font-semibold text-primary">确定性输出</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">结果稳定复现。</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">交付可验证</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">能检查，能打开。</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
-        <div class="text-base font-semibold text-primary">交付可验证</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">能检查，能打开。</div>
-      </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
-        <div class="text-base font-semibold text-primary">适合迁移项目</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">无需从零重建。</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">适合迁移项目</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">无需从零重建。</div>
       </div>
     </div>
   </div>
@@ -484,52 +445,35 @@ layout: default
       <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
         把这些能力做成在线工具平台，而不只是本地脚本。
       </h2>
-      <p class="mt-5 max-w-xl text-base leading-7 text-muted-foreground md:text-lg">
-        目标不是把命令简单搬到网页，而是把常见 BI 动作变成更顺手的在线工作台。
-        底层共用 Python SDK，前台则把能力包装成更容易使用的在线体验。
+      <p class="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
+        不是把命令搬到网页，而是把常见 BI 动作变成上传即用、顺手操作的在线工作台。底层共用 Python SDK。
       </p>
     </div>
     <div class="mt-4 grid grid-cols-2 gap-2">
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">能在线使用</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">能直接处理文件</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">更低门槛开放给 BI 开发者</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">能从代码能力变成可直接点开用的工具</div>
-    </div>
-    <div class="mt-6 rounded-[24px] border border-dashed border-primary/50 bg-white/50 p-5 shadow-sm">
-      <div class="text-sm font-semibold text-primary">在线体验的直觉</div>
-      <div class="mt-3 flex flex-wrap gap-2 text-sm text-foreground">
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">上传</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">解析</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">预览</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">调整</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1">导出</span>
-      </div>
-    </div>
-    <div class="mt-4 text-sm leading-6 text-muted-foreground">
-      这不是把 SDK 简单包一层壳，而是把常见 BI 工作流做成更自然的在线操作路径。
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">在线使用</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">直接处理文件</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">更低门槛</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">代码变工具</div>
     </div>
   </div>
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 shadow-sm">
+  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-6 shadow-sm">
     <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-      现在已经有的两个工具
+      已有的两个工具原型
     </div>
-    <div class="mt-4 text-sm leading-6 text-muted-foreground">
-      现在的原型已经能覆盖两个很实用的方向，后面可以继续往平台化体验演进。
-    </div>
-    <div class="mt-6 space-y-4">
+    <div class="mt-4 space-y-3">
       <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
         <div class="text-sm font-semibold text-primary">布局解析</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">提取 Tableau workbook 的布局结构，导出 JSON 或布局结果。</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">提取 dashboard 布局结构，导出 JSON。</div>
       </div>
       <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
         <div class="text-sm font-semibold text-primary">KPI 复制</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">复制 KPI 工作表，并只替换局部指标，保留原结构和样式。</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">复制 KPI 工作表，只替换指标，保留原结构和样式。</div>
       </div>
     </div>
-    <div class="mt-6 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-5 py-4">
-      <div class="text-sm font-semibold text-primary">更长远的创想</div>
-      <div class="mt-2 text-sm leading-6 text-muted-foreground">
-        协作与版本管理可以作为未来方向来想，但它现在更像是一个创想，不是当前要承诺交付的主功能。
+    <div class="mt-4 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-4 py-3">
+      <div class="text-xs font-semibold text-primary">更长远</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">
+        协作与版本管理 — 创想方向，非当前承诺。
       </div>
     </div>
   </div>
@@ -545,9 +489,9 @@ class: text-center
 <div class="mx-auto mt-6 max-w-3xl text-left">
   <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm">
     <div class="font-mono text-base leading-8 text-foreground">
-      <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
-      <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
-      <div class="mt-2"><span class="text-muted-foreground">$</span> uvx cwtwb <span class="text-xs text-muted-foreground"># 启动 MCP 服务器</span></div>
+      <div><span class="text-muted-foreground">$</span> pip install cwprep cwtwb</div>
+      <div class="mt-2"><span class="text-muted-foreground">$</span> cwprep-mcp <span class="text-xs text-muted-foreground"># 启动 cwprep MCP 服务器</span></div>
+      <div><span class="text-muted-foreground">$</span> cwtwb-mcp <span class="text-xs text-muted-foreground"># 启动 cwtwb MCP 服务器</span></div>
     </div>
   </div>
   <div class="mt-4 grid gap-3 md:grid-cols-2">

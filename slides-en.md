@@ -34,9 +34,6 @@ background: "#e9e6dc"
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Auditable</span>
         <span v-click class="rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-sm font-medium text-foreground shadow-sm">Migratable</span>
       </div>
-      <div v-click class="mt-4 rounded-[16px] border border-primary/30 bg-white/30 px-4 py-2 text-xs leading-5 text-muted-foreground">
-        MCP (Model Context Protocol) is an open standard for AI tool interoperability — think of it as a <strong class="text-foreground">USB port for AI</strong>. Any MCP-compatible client like Claude, Cursor, or Gemini can call our tools directly.
-      </div>
     </div>
   </div>
 </div>
@@ -103,11 +100,13 @@ class: text-center
     The most time-consuming part in Tableau isn't "drawing a chart," but doing these mechanical tasks repeatedly.
   </div>
 
-  <div class="mt-6 grid gap-4 md:grid-cols-2">
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly dragging fields</div>
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly adjusting layouts</div>
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly copying KPI modules</div>
     <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly migrating workbooks</div>
+    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly checking if files open correctly</div>
+    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly fixing small but time-consuming issues</div>
   </div>
 
   <div class="mt-6 rounded-[24px] border border-primary/50 bg-white/50 px-6 py-5 text-base leading-7 text-foreground shadow-sm">
@@ -214,6 +213,10 @@ Input one sentence, output a usable Tableau Prep `.tfl` / `.tflx` file.
 - Avoid GUI Dependency: Build flows without opening Tableau Prep
 - Auditable: Translates flows to SQL for DBA/Compliance review
 
+<div class="mt-3 rounded-[14px] border border-primary/30 bg-white/30 px-3 py-2 text-xs leading-5 text-muted-foreground">
+  MCP (Model Context Protocol) is an open protocol for AI tool interoperability — think of it as a <strong class="text-foreground">USB port for AI</strong>
+</div>
+
 <div class="mt-4 flex flex-wrap gap-3">
   <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">22 Flow Operations</span>
   <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">4 Databases</span>
@@ -246,14 +249,6 @@ class: text-center
     <p class="mt-2 text-sm leading-7 text-muted-foreground">From raw data to TFLX file generation.</p>
   </div>
 </div>
-
----
-layout: fact
----
-
-# The Value of cwprep
-
-## Turning Prep flow creation into an engineering action
 
 ---
 layout: center
@@ -383,57 +378,23 @@ layout: default
   </div>
   <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
     <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-      Key Difference
-    </div>
-    <p class="mt-4 text-base leading-7 text-muted-foreground">
-      cwprep manages "How data flows",<br>
-      cwtwb manages "How dashboards are built".
-    </p>
-    <div class="mt-4 grid gap-2 md:grid-cols-2">
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Repeatable</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Verifiable</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Migratable</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-3 py-2 text-xs text-foreground shadow-sm">Orchestrable</div>
-    </div>
-  </div>
-</div>
-
----
-layout: center
-class: text-center
----
-
-<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-[1.1fr_0.9fr]">
-  <div class="flex items-start justify-center text-left">
-    <div>
-      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-        Core Positioning
-      </div>
-      <h2 class="mt-4 max-w-xl text-4xl font-black tracking-[-0.04em] leading-[1.1] text-foreground md:text-5xl">
-        Workbook engineering layer.
-      </h2>
-      <p class="mt-5 max-w-lg text-lg leading-8 text-muted-foreground">
-        Turning workbook generation, validation, migration, and refactoring into repeatable engineering tasks.
-      </p>
-    </div>
-  </div>
-
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-7 text-left shadow-sm">
-    <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
       Core Value
     </div>
-    <div class="mt-6 grid gap-4">
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
-        <div class="text-base font-semibold text-primary">Deterministic Output</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">Stable and repeatable results.</div>
+    <p class="mt-3 text-sm leading-6 text-muted-foreground">
+      cwprep manages "how data flows", cwtwb manages "how dashboards are built".
+    </p>
+    <div class="mt-3 grid gap-2">
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Deterministic Output</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Stable and repeatable results.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
-        <div class="text-base font-semibold text-primary">Verifiable Delivery</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">Inspectable and openable files.</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Verifiable Delivery</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Inspectable and openable files.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
-        <div class="text-base font-semibold text-primary">Migration Friendly</div>
-        <div class="mt-2 text-sm leading-6 text-muted-foreground">No need to rebuild from scratch.</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Migration Friendly</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">No need to rebuild from scratch.</div>
       </div>
     </div>
   </div>
@@ -484,49 +445,35 @@ layout: default
       <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
         Building an online platform, not just local scripts.
       </h2>
-      <p class="mt-3 max-w-xl text-sm leading-6 text-muted-foreground md:text-base">
-        Not just wrapping commands in a UI, but turning BI tasks into a natural online workflow.
-        Powered by our Python SDK under the hood.
+      <p class="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">
+        Not just wrapping commands in a UI, but turning BI tasks into an upload-and-go online workflow. Powered by our Python SDK.
       </p>
     </div>
     <div class="mt-4 grid grid-cols-2 gap-2">
       <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Online Access</div>
       <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Direct File Processing</div>
       <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Low Entry Barrier</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Code-to-Tool Transformation</div>
-    </div>
-    <div class="mt-4 rounded-[24px] border border-dashed border-primary/50 bg-white/50 p-4 shadow-sm">
-      <div class="text-xs font-semibold text-primary">The Intuitive Workflow</div>
-      <div class="mt-2 flex flex-wrap gap-2 text-xs text-foreground">
-        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Upload</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Parse</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Preview</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Adjust</span>
-        <span class="rounded-full border border-primary/50 bg-white/50 px-2 py-0.5">Export</span>
-      </div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-2 text-xs leading-5 shadow-sm">Code-to-Tool</div>
     </div>
   </div>
   <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
     <div class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
-      Available Prototypes
+      Two Tool Prototypes
     </div>
-    <div class="mt-3 text-xs leading-5 text-muted-foreground">
-      Current tools already cover two practical directions for platform evolution.
-    </div>
-    <div class="mt-4 space-y-3">
+    <div class="mt-3 space-y-3">
       <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm">
         <div class="text-xs font-semibold text-primary">Layout Parsing</div>
-        <div class="mt-1 text-xs leading-5 text-muted-foreground">Extracting dashboard structures and exporting to JSON.</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Extract dashboard structures, export to JSON.</div>
       </div>
       <div class="rounded-[20px] border border-primary/50 bg-white/50 p-3 shadow-sm">
         <div class="text-xs font-semibold text-primary">KPI Cloning</div>
-        <div class="mt-1 text-xs leading-5 text-muted-foreground">Cloning KPI sheets with metric swapping while preserving styles.</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Clone KPI sheets, swap metrics only, preserve styles.</div>
       </div>
     </div>
-    <div class="mt-4 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-4 py-3">
-      <div class="text-xs font-semibold text-primary">Long-term Vision</div>
+    <div class="mt-3 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-4 py-3">
+      <div class="text-xs font-semibold text-primary">Longer Term</div>
       <div class="mt-1 text-xs leading-5 text-muted-foreground">
-        Collaboration and version management are conceptual directions for future growth.
+        Collaboration & versioning — a vision, not a current commitment.
       </div>
     </div>
   </div>
@@ -542,9 +489,9 @@ class: text-center
 <div class="mx-auto mt-6 max-w-3xl text-left">
   <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm">
     <div class="font-mono text-base leading-8 text-foreground">
-      <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
-      <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
-      <div class="mt-2"><span class="text-muted-foreground">$</span> uvx cwtwb <span class="text-xs text-muted-foreground"># start MCP server</span></div>
+      <div><span class="text-muted-foreground">$</span> pip install cwprep cwtwb</div>
+      <div class="mt-2"><span class="text-muted-foreground">$</span> cwprep-mcp <span class="text-xs text-muted-foreground"># start cwprep MCP server</span></div>
+      <div><span class="text-muted-foreground">$</span> cwtwb-mcp <span class="text-xs text-muted-foreground"># start cwtwb MCP server</span></div>
     </div>
   </div>
   <div class="mt-4 grid gap-3 md:grid-cols-2">

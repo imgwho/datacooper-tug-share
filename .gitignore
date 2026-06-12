@@ -3,6 +3,8 @@ node_modules/
 
 # Build and Export
 dist/
+dist-test/
+dist-test-en/
 dist-local/
 export/
 slides-export/
