@@ -279,7 +279,7 @@ class: text-center
 
 # cwprep vs Tableau Agent
 
-<div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
+<div class="mx-auto mt-4 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
   <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <h3 class="text-lg font-bold text-foreground">Tableau Agent</h3>
     <ul class="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
@@ -289,6 +289,9 @@ class: text-center
       <li>No Join / Union support</li>
       <li>No SQL export</li>
     </ul>
+    <div class="mt-4 text-[8px] break-all text-muted-foreground opacity-60">
+      Source: <a href="https://help.tableau.com/current/prep/en-us/prep_einstein.htm" target="_blank" class="hover:text-primary transition-colors">https://help.tableau.com/current/prep/en-us/prep_einstein.htm</a>
+    </div>
   </div>
   <div class="flex items-center justify-center">
     <div class="text-2xl font-black text-primary">VS</div>
@@ -314,6 +317,46 @@ layout: section
 ---
 
 # cwtwb
+
+---
+layout: center
+class: text-center
+---
+
+# cwtwb vs Tableau Agent (Web)
+
+<div class="mx-auto mt-4 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <h3 class="text-lg font-bold text-foreground">Tableau Agent (Web)</h3>
+    <ul class="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
+      <li>Limited to Worksheets only</li>
+      <li>Cannot build Dashboards</li>
+      <li>No advanced formatting support</li>
+      <li>No support for Params/Sets</li>
+      <li>No Data Modeling (Join/Relation)</li>
+    </ul>
+    <div class="mt-4 text-[8px] break-all text-muted-foreground opacity-60">
+      Source: <a href="https://help.tableau.com/current/online/en-us/web_author_einstein.htm" target="_blank" class="hover:text-primary transition-colors">https://help.tableau.com/current/online/en-us/web_author_einstein.htm</a>
+    </div>
+  </div>
+  <div class="flex items-center justify-center">
+    <div class="text-2xl font-black text-primary">VS</div>
+  </div>
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-md">
+    <h3 class="text-lg font-bold text-primary">cwtwb</h3>
+    <ul class="mt-3 space-y-2 text-sm leading-6 text-foreground font-medium">
+      <li class="text-primary font-bold">✅ Full Dashboard Orchestration</li>
+      <li class="text-primary font-bold">✅ Declarative Layout & Formatting</li>
+      <li class="text-primary font-bold">✅ Data Source Migration</li>
+      <li class="text-primary font-bold">✅ XSD Validation & Versioning</li>
+      <li>Supports Offline/Batch Production</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mx-auto mt-5 max-w-3xl rounded-[20px] border border-primary/50 bg-white/50 px-5 py-3 text-sm leading-6 text-foreground shadow-sm">
+  cwtwb is an **"Engineering BI Generator"**, filling the gaps in complex layouts and automated production left by the official Agent.
+</div>
 
 ---
 layout: center
