@@ -39,6 +39,47 @@ background: "#e9e6dc"
 </div>
 
 ---
+layout: center
+---
+
+# Agenda
+
+<div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-2">
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">01</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">Background & Positioning</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>Tool positioning · Tableau in the data lifecycle</li>
+      <li>Pain of manual labor · Who is this for</li>
+    </ul>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">02</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">cwprep · Prep Flow Engine</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>One sentence intro · Layered architecture</li>
+      <li>vs Tableau Agent · Cases & demos</li>
+    </ul>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">03</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">cwtwb · Workbook Engineering</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>Layered architecture · vs Tableau Agent (Web)</li>
+      <li>One sentence intro · Cases & demos</li>
+    </ul>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">04</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">datacooper.com & Closing</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>Online tool platform direction</li>
+      <li>Try it out · Q&A</li>
+    </ul>
+  </div>
+</div>
+
+---
 layout: fact
 ---
 
@@ -658,13 +699,13 @@ class: text-center
 
 # Try It Out
 
-<div class="mx-auto mt-6 max-w-3xl text-left">
-  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm font-mono text-[13px] leading-6 text-foreground">
+<div class="mx-auto mt-3 max-w-3xl text-left">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-4 shadow-sm font-mono text-[13px] leading-6 text-foreground">
     <div class="mb-2 text-muted-foreground"># 1. Install SDK</div>
     <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
     <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
-    <div class="mt-4 mb-2 text-muted-foreground"># 2. Configure MCP (Claude Desktop / Cursor)</div>
-    <pre class="bg-black/5 p-3 rounded-lg text-[11px] leading-relaxed whitespace-pre overflow-auto">
+    <div class="mt-3 mb-2 text-muted-foreground"># 2. Configure MCP (Claude Desktop / Cursor)</div>
+    <pre class="bg-black/5 p-2.5 rounded-lg text-[11px] leading-relaxed whitespace-pre overflow-auto">
 {{ `{
   "mcpServers": {
     "cwprep": { "command": "uvx", "args": ["cwprep"] },
@@ -673,30 +714,72 @@ class: text-center
 }` }}
     </pre>
   </div>
-  <div class="mt-4 grid gap-3 md:grid-cols-2">
-    <a href="https://github.com/imgwho/cwprep" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+  <div class="mt-3 grid gap-3 md:grid-cols-2">
+    <a href="https://github.com/imgwho/cwprep" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">GitHub: cwprep</div>
-      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwprep</div>
+      <div class="mt-0.5 text-xs text-muted-foreground">github.com/imgwho/cwprep</div>
     </a>
-    <a href="https://github.com/imgwho/cwtwb" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+    <a href="https://github.com/imgwho/cwtwb" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">GitHub: cwtwb</div>
-      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwtwb</div>
+      <div class="mt-0.5 text-xs text-muted-foreground">github.com/imgwho/cwtwb</div>
     </a>
-    <a href="https://datacooper.com" target="_blank" class="col-span-full rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+    <a href="https://datacooper.com" target="_blank" class="col-span-full rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">datacooper.com</div>
-      <div class="mt-1 text-xs leading-5 text-muted-foreground">Online Tools · Docs · Community</div>
+      <div class="mt-0.5 text-xs leading-5 text-muted-foreground">Online Tools · Docs · Community</div>
     </a>
   </div>
 </div>
 
 ---
-layout: section
+layout: center
 ---
 
-# Q&A / Discussion
+# Acknowledgments
+
+<div class="mx-auto mt-4 max-w-4xl space-y-3 text-left">
+  <div class="grid gap-3 md:grid-cols-2">
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Patrick Therriault</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">For guiding me deeper into this amazing Tableau community</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Andy Cotgreave</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">For the insights that drove this project forward</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Adam Mico</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">For your constant patience and solid advice</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Jeffrey Shaffer</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">The skills you suggested became invaluable process constraints</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Matthew Miller · Elif Tutuk · Paul Morgan · Olga L.</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">For the incredibly useful hints from an official perspective</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Li-Lun Tu</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">For suggestions on building a brand</div>
+    </div>
+  </div>
+  <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+    <div class="text-sm font-bold text-foreground">Alex Mou</div>
+    <div class="mt-1 text-xs leading-5 text-muted-foreground">For your encouragement and the advice shared in our conversations</div>
+  </div>
+  <div class="rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-5 py-4 text-center shadow-sm">
+    <div class="text-sm leading-6 text-muted-foreground">And everyone who left a comment or joined the discussion to keep me on the right track!</div>
+  </div>
+</div>
 
 ---
 layout: quote
 ---
 
 # Don't leave Tableau. Let AI give time back to humans.
+
+---
+layout: section
+---
+
+# Q&A / Discussion

@@ -39,6 +39,47 @@ background: "#e9e6dc"
 </div>
 
 ---
+layout: center
+---
+
+# 目录
+
+<div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-2">
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">01</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">背景与定位</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>工具定位 · Tableau 在数据流程中的位置</li>
+      <li>机械劳动的痛点 · 适合谁</li>
+    </ul>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">02</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">cwprep · 数据流引擎</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>一句话介绍 · 分层架构图</li>
+      <li>vs Tableau Agent · 案例与演示</li>
+    </ul>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">03</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">cwtwb · 工作簿工程</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>分层架构图 · vs Tableau Agent (Web)</li>
+      <li>一句话介绍 · 实战案例与演示</li>
+    </ul>
+  </div>
+  <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+    <div class="text-3xl font-black text-primary opacity-40">04</div>
+    <h3 class="mt-1 text-lg font-bold text-foreground">datacooper.com & 收尾</h3>
+    <ul class="mt-2 space-y-1 text-sm leading-6 text-muted-foreground">
+      <li>在线工具平台方向</li>
+      <li>快速上手 · Q&A</li>
+    </ul>
+  </div>
+</div>
+
+---
 layout: fact
 ---
 
@@ -608,13 +649,13 @@ class: text-center
 
 # 试试看
 
-<div class="mx-auto mt-6 max-w-3xl text-left">
-  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm font-mono text-[13px] leading-6 text-foreground">
+<div class="mx-auto mt-3 max-w-3xl text-left">
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-4 shadow-sm font-mono text-[13px] leading-6 text-foreground">
     <div class="mb-2 text-muted-foreground"># 1. 安装 SDK</div>
     <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
     <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
-    <div class="mt-4 mb-2 text-muted-foreground"># 2. 配置 MCP (Claude Desktop / Cursor)</div>
-    <pre class="bg-black/5 p-3 rounded-lg text-[11px] leading-relaxed whitespace-pre overflow-auto">
+    <div class="mt-3 mb-2 text-muted-foreground"># 2. 配置 MCP (Claude Desktop / Cursor)</div>
+    <pre class="bg-black/5 p-2.5 rounded-lg text-[11px] leading-relaxed whitespace-pre overflow-auto">
 {{ `{
   "mcpServers": {
     "cwprep": { "command": "uvx", "args": ["cwprep"] },
@@ -623,30 +664,72 @@ class: text-center
 }` }}
     </pre>
   </div>
-  <div class="mt-4 grid gap-3 md:grid-cols-2">
-    <a href="https://github.com/imgwho/cwprep" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+  <div class="mt-3 grid gap-3 md:grid-cols-2">
+    <a href="https://github.com/imgwho/cwprep" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">GitHub: cwprep</div>
-      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwprep</div>
+      <div class="mt-0.5 text-xs text-muted-foreground">github.com/imgwho/cwprep</div>
     </a>
-    <a href="https://github.com/imgwho/cwtwb" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+    <a href="https://github.com/imgwho/cwtwb" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">GitHub: cwtwb</div>
-      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwtwb</div>
+      <div class="mt-0.5 text-xs text-muted-foreground">github.com/imgwho/cwtwb</div>
     </a>
-    <a href="https://datacooper.com" target="_blank" class="col-span-full rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+    <a href="https://datacooper.com" target="_blank" class="col-span-full rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">datacooper.com</div>
-      <div class="mt-1 text-xs leading-5 text-muted-foreground">在线工具 · 文档 · 社区</div>
+      <div class="mt-0.5 text-xs leading-5 text-muted-foreground">在线工具 · 文档 · 社区</div>
     </a>
   </div>
 </div>
 
 ---
-layout: section
+layout: center
 ---
 
-# Q&A / 交流
+# 致谢
+
+<div class="mx-auto mt-4 max-w-4xl space-y-3 text-left">
+  <div class="grid gap-3 md:grid-cols-2">
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Patrick Therriault</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">引导我深入 Tableau 社区</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Andy Cotgreave</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">推动项目前进的洞察</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Adam Mico</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">耐心与扎实的建议</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Jeffrey Shaffer</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">推荐的技巧成为很好的过程约束</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Matthew Miller · Elif Tutuk · Paul Morgan · Olga L.</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">来自官方的极有价值的提示</div>
+    </div>
+    <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+      <div class="text-sm font-bold text-foreground">Li-Lun Tu</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">品牌建设方面的建议</div>
+    </div>
+  </div>
+  <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
+    <div class="text-sm font-bold text-foreground">Alex Mou</div>
+    <div class="mt-1 text-xs leading-5 text-muted-foreground">鼓励以及交流中给我的建议</div>
+  </div>
+  <div class="rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-5 py-4 text-center shadow-sm">
+    <div class="text-sm leading-6 text-muted-foreground">感谢每一位留言和参与讨论、帮助我走在正确方向上的朋友！</div>
+  </div>
+</div>
 
 ---
 layout: quote
 ---
 
 # 不离开 Tableau，用 AI 把时间还给人类。
+
+---
+layout: section
+---
+
+# Q&A / 交流
