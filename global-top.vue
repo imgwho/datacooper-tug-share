@@ -209,7 +209,7 @@ const isEn = computed(() => {
   }
 
   .big-diagram .mermaid {
-    transform: scale(2.6);
+    transform: scale(1.3);
     transform-origin: center;
     display: flex;
     justify-content: center;

@@ -265,15 +265,41 @@ class: text-center
 <div class="big-diagram mt-10 mb-10">
 
 ```mermaid
-flowchart LR
-  A["Natural Language / MCP"] --> B["Planner"]
-  C["DB / Excel / CSV"] --> B
-  B --> D["Flow Builder"]
-  D --> E["Validator"]
-  D --> F["SQL Translator"]
-  E --> G[".tfl / .tflx"]
-  F --> G
-  G --> H["Auditable / Reusable / Shareable"]
+flowchart TD
+  subgraph Interfaces["Interfaces"]
+    direction LR
+    MCP["MCP Server\n(tools · resources · prompts)\nClaude / Cursor / VSCode / Gemini"]
+    PY["Python Library\nfrom cwprep import TFLBuilder, TFLPackager\nbuilder.add_...() / builder.build()"]
+  end
+
+  subgraph Core["TFLBuilder"]
+    direction LR
+    SDK["TFLBuilder · TFLPackager · SQLTranslator · ExpressionTranslator"]
+  end
+
+  subgraph Operations["Operations"]
+    direction LR
+    DS["Data Sources\nMySQL · PostgreSQL · SQL Server\nExcel · CSV · SQL"]
+    TF["Transformations\nJoin · Union · Filter · Rename\nCalculation · Change Type · Pivot"]
+    AN["Analytics & Output\nAggregate · Unpivot\nSQL Translation · TFLX Packaging"]
+  end
+
+  subgraph Validation["Validation & Packaging"]
+    direction LR
+    VL["validate_flow_definition → build → save_tfl / save_tflx"]
+  end
+
+  OUT[".tfl / .tflx"]
+
+  MCP --> Core
+  PY --> Core
+  Core --> DS
+  Core --> TF
+  Core --> AN
+  DS --> VL
+  TF --> VL
+  AN --> VL
+  VL --> OUT
 ```
 
 </div>
@@ -380,16 +406,41 @@ class: text-center
 <div class="big-diagram mt-10 mb-10">
 
 ```mermaid
-flowchart LR
-  A["Natural Language / TWB / Layout JSON"] --> B["Workbook Composer"]
-  A --> C["Chart Recipe Engine"]
-  A --> D["Layout Engine"]
-  B --> E["Worksheet Refactor / Migration"]
-  C --> E
-  D --> E
-  E --> F["Validation"]
-  F --> G[".twb / .twbx"]
-  G --> H["Repeatable / Verifiable / Migratable"]
+flowchart TD
+  subgraph Interfaces["Interfaces"]
+    direction LR
+    MCP["MCP Server\n(tools_workbook)\nClaude / Cursor / VSCode / Claude Code"]
+    PY["Python Library\nfrom cwtwb.twb_editor import TWBEditor\neditor.add_...() / configure_...() / save(...)"]
+  end
+
+  subgraph Core["TWBEditor"]
+    direction LR
+    MX["ParametersMixin · ConnectionsMixin · ChartsMixin · DashboardsMixin"]
+  end
+
+  subgraph Subsystems["Subsystems"]
+    direction LR
+    CB["Chart Builders\nBasic · DualAxis · Pie\nText · Map · Recipes"]
+    DS["Dashboard System\nlayouts · actions\ndependencies"]
+    AM["Analysis & Migration\nmigration.py · twb_analyzer.py\ncapability_registry"]
+  end
+
+  subgraph Foundation["XML Engine (lxml)"]
+    direction LR
+    XE["template.twb / .twbx → patch → validate → save"]
+  end
+
+  OUT["output.twb / output.twbx"]
+
+  MCP --> Core
+  PY --> Core
+  Core --> CB
+  Core --> DS
+  Core --> AM
+  CB --> XE
+  DS --> XE
+  AM --> XE
+  XE --> OUT
 ```
 
 </div>
