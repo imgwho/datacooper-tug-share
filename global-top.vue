@@ -1,18 +1,18 @@
 <template>
-  <div class="fixed bottom-3 right-3 z-50 flex gap-2 sm:bottom-6 sm:right-6">
+  <div class="fixed top-2 right-2 z-50 flex gap-1 sm:top-3 sm:right-3">
     <a
       v-if="isEn"
       href="../"
-      class="flex h-8 items-center justify-center gap-1.5 rounded-full border border-primary/50 bg-white/50 px-3 text-[10px] font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95 sm:h-10 sm:gap-2 sm:px-4 sm:text-xs"
+      class="flex h-6 items-center justify-center gap-1 rounded-full border border-primary/50 bg-white/50 px-2 text-[9px] font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95 sm:h-7 sm:gap-1.5 sm:px-2.5 sm:text-[10px]"
     >
-      <span class="text-sm sm:text-base">🇨🇳</span> 中文版
+      <span class="text-xs sm:text-sm">🇨🇳</span> 中文
     </a>
     <a
       v-else
       href="en/"
-      class="flex h-8 items-center justify-center gap-1.5 rounded-full border border-primary/50 bg-white/50 px-3 text-[10px] font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95 sm:h-10 sm:gap-2 sm:px-4 sm:text-xs"
+      class="flex h-6 items-center justify-center gap-1 rounded-full border border-primary/50 bg-white/50 px-2 text-[9px] font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95 sm:h-7 sm:gap-1.5 sm:px-2.5 sm:text-[10px]"
     >
-      <span class="text-sm sm:text-base">🇺🇸</span> English
+      <span class="text-xs sm:text-sm">🇺🇸</span> EN
     </a>
   </div>
 </template>
