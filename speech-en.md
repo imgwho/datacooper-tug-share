@@ -11,175 +11,199 @@ Hi everyone. Today I want to talk about one idea: moving from manual dragging to
 
 I will cover three things: cwprep, cwtwb, and datacooper.com.
 
+Let me show you what we will go through today.
+
+## 【P2】Agenda
+
+Four parts today.
+
+Part one: background and positioning — why these tools exist and who they are for.
+
+Part two: cwprep — the Prep flow engine.
+
+Part three: cwtwb — the workbook engineering tool.
+
+Part four: datacooper.com and how to get started.
+
 Let me start with a quick note on what these tools are — and what they are not.
 
-## 【P2】Positioning
+## 【P3】Positioning
 
 These Python tools are **not** here to replace BI developers. They are not trying to turn analysts into programmers.
 
-The goal is simple: **help you work faster**. Hand over the repetitive, rule-based tasks to tools, so you can spend your time on what matters — understanding the business and making good decisions.
+The goal is simple: **help you work faster**. Give the repetitive, rule-based tasks to tools, so you can spend your time on what matters — understanding the business and making good decisions.
 
-## 【P3】Tableau's Position in the Data Analytics Lifecycle
+## 【P4】Tableau's Position in the Data Analytics Lifecycle
 
 Before we go deeper, let me quickly show where Tableau fits in the data workflow.
 
-There are five steps: data ingestion, data prep, Tableau modeling and visualization, distribution, and optimization.
+Five steps: data ingestion, data prep, Tableau modeling and visualization, distribution, and feedback.
 
-Our tools focus on two steps. cwprep works on **data prep**. cwtwb works on **Tableau generation and orchestration**. Tableau itself stays in the middle, handling the analysis and expression.
+Our tools focus on two steps. cwprep works on **data prep**. cwtwb works on **Tableau generation**. Tableau itself stays in the middle, handling the analysis.
 
-## 【P4】Why Build These Tools?
+## 【P5】Why Build These Tools?
 
 So why did we build these tools?
 
-## 【P5】The Pain of Manual Labor
+## 【P6】The Pain of Manual Labor
 
-If you look at day-to-day Tableau work, the biggest time sink is not "drawing a chart." It is doing the same mechanical tasks over and over.
+If you look at daily Tableau work, the biggest time sink is not "drawing a chart." It is doing the same tasks over and over.
 
-Dragging fields again. Adjusting layouts again. Copying KPI modules again. Migrating workbooks again. Checking if files open correctly — again. Fixing small but time-consuming issues — again and again.
+Dragging fields again. Adjusting layouts again. Copying KPI modules again. Migrating workbooks again. Checking if files open — again. Fixing small but slow problems — again and again.
 
-None of these are hard on their own. But they share one problem: **they don't create new business value, yet they keep eating up your time.**
+None of these are hard. But they share one problem: **they don't create new value, but they keep eating your time.**
 
-## 【P6】Paradigm Shift & Quick Demo
+## 【P7】Paradigm Shift & Quick Demo
 
-This slide shows the difference between the old way and the new way.
+This slide shows the old way vs. the new way.
 
-On the left, the **manual approach**: 300+ mouse clicks, binary .twb files you can't reuse, full re-dragging for every change, and logic hidden deep in the GUI.
+On the left, the **manual way**: 300+ mouse clicks, binary .twb files you can't reuse, full re-dragging for every change, logic hidden in the GUI.
 
-On the right, the **engineering approach**: one command to generate, plain-text config you can put in Git, modular components you can swap in seconds, and code that serves as documentation.
+On the right, the **engineering way**: one command to generate, plain-text config for Git, modular parts you can swap fast, code that is also documentation.
 
-Now let me show you two quick demos.
+Let me show you two quick demos.
 
 > 【Play Video 1: Zero Barrier Text-to-Flow】
 
-This first one shows how fast it is — just describe what you want, and the system generates a Prep flow file in seconds.
+This first one shows how fast it is — just say what you want, and the system makes a Prep flow file in seconds.
 
 > 【Play Video 2: Complex Logic Parsing】
 
-The second one is more complex. The Agent reads a multi-table business description and turns it into a complete data pipeline.
+The second one is harder. The Agent reads a multi-table description and turns it into a full data pipeline.
 
-## 【P7】Who Is This For?
+## 【P8】Who Is This For?
 
-So who can benefit from these tools? Three groups.
+So who can use these tools? Three groups.
 
 First, **Tableau analysts** — less dragging and copying, more time for real analysis.
 
 Second, **data engineers and IT** — automation, version control, batch deployment. BI becomes part of the engineering workflow.
 
-Third, **team leads and managers** — auditable, repeatable deliverables. Less risk when someone leaves the team.
+Third, **team leads and managers** — auditable, repeatable results. Less risk when someone leaves the team.
 
-## 【P8】cwprep
+## 【P9】cwprep
 
 Now let's talk about the first tool: cwprep.
 
-## 【P9】cwprep Architecture
+## 【P10】cwprep: One Sentence Intro
 
-cwprep is basically a text-to-PrepFlow engine.
+One sentence: **give it one sentence, get a working Tableau Prep .tfl / .tflx file.**
 
-You give it a sentence, it gives you a working Tableau Prep flow file.
+Four key features. Text-to-PrepFlow — describe your data logic in plain English. MCP Integration — works with Claude, Gemini, Cursor. No GUI needed — build flows without opening Tableau Prep. Auditable — translate flows to SQL for your DBA to review.
 
-Look at the architecture. On the left, the input can be natural language or an MCP call. MCP is an open protocol for AI tools — think of it as a USB port for AI. It works with Claude, Gemini, Cursor, and other clients.
+Under the hood: 22 flow operations, 4 databases, SQL translation, TFLX packaging.
 
-The input goes through a Planner, then a Flow Builder, then a Validator. The output is a .tfl or .tflx file.
+Core value: cwprep handles "how data flows", cwtwb handles "how dashboards are built". Speed, consistency, and teamwork.
 
-There is also a **SQL Translator**. This is very important. It can turn your Prep flow into SQL, so your DBA or compliance team can read and review it.
+## 【P11】cwprep Architecture
 
-## 【P10】cwprep vs Tableau Agent
+Let's look at the architecture. It is built in layers.
+
+On top, the interface layer. Left side: MCP Server — works with Claude, Cursor, VSCode, Gemini. Right side: Python Library — import and write scripts directly.
+
+In the middle, the core engine: TFLBuilder, TFLPackager, SQLTranslator, and ExpressionTranslator.
+
+Below that, the operations layer. Three groups: Data Sources — MySQL, PostgreSQL, SQL Server, Excel, CSV. Transformations — Join, Union, Filter, Rename, Calculation, Pivot, and more. Analytics and Output — Aggregate, Unpivot, SQL Translation, TFLX Packaging.
+
+At the bottom, validation and packaging. The output is .tfl or .tflx.
+
+One key part: the **SQL Translator**. In many BI projects, the real problem is not "can you do it" — it is "can you explain it, audit it, show it to your DBA." SQL translation solves that.
+
+## 【P12】cwprep vs Tableau Agent
 
 I know many of you are thinking: doesn't Tableau already have an Agent?
 
 Yes, but here is the difference.
 
-Tableau Agent is a closed-source product. It only works on Tableau Cloud. And it **does not support Join or Union**. It also cannot export SQL.
+Tableau Agent is closed-source. It only works on Tableau Cloud. And it **does not support Join or Union**. No SQL export either.
 
-cwprep is open-source. You can run it anywhere — local, cloud, any environment. It supports Join, Union, and Pivot. And it can translate your entire flow into SQL.
+cwprep is open-source. Run it anywhere — local, cloud, any setup. It supports Join, Union, and Pivot. And it can translate your whole flow into SQL.
 
-In short: what the official Agent can do, cwprep can also do. What the official Agent cannot do — Join, Union, SQL translation — cwprep can do those too.
+Bottom line: what the official Agent can do, cwprep can do too. What the official Agent cannot do — Join, Union, SQL — cwprep can do. Feature coverage is 88%.
 
-## 【P11】cwprep Typical Cases & Quick Demo
+## 【P13】cwprep Typical Cases & Quick Demo
 
-Let me show you two real cases.
+Two real cases. Let's watch the demos.
 
-**Case 1: Zero barrier generation.** You don't even need Tableau Prep installed locally. Just describe your cleaning logic in plain English, send it to the Agent, and you get a .tfl file in seconds. That's Text-to-Flow.
+**Case 1: Zero barrier.** You don't need Tableau Prep installed. Just describe your cleaning logic, send it to the Agent, and get a .tfl file in seconds.
 
-**Case 2: Complex multi-table logic.** The Agent reads a description that spans multiple tables — orders, returns, customers — understands the relationships, and generates the correct Join logic, aggregations, and filters.
-
-Let's watch the demos.
+**Case 2: Complex logic.** The Agent reads a description across multiple tables — orders, returns, customers — finds the relationships, and builds the right Join logic.
 
 > 【Play Video 3: Seconds Response — Text-to-Flow】
 
+Fast response in a simple case. Now the second one.
+
 > 【Play Video 4: Deep Parsing — Multi-table Logic】
 
-As you can see, even with complex scenarios, the Agent produces accurate, complete Prep flows.
+Even with complex multi-table logic, the Agent produces accurate Prep flows.
 
-## 【P12】cwtwb
+## 【P14】cwtwb
 
 Now the second tool: cwtwb.
 
 If cwprep handles "how data flows," then cwtwb handles "how dashboards are built."
 
-## 【P13】cwtwb Architecture
+## 【P15】cwtwb Architecture
 
-Look at the architecture. The input can be natural language, an existing TWB file, or layout JSON.
+Let's look at the architecture. Same layered design.
 
-There are three core engines: Workbook Composer for overall structure, Chart Recipe Engine for charts, and Layout Engine for dashboard layout.
+Interface layer: MCP Server on the left — works with Claude, Cursor, VSCode, Claude Code. Python Library on the right — import TWBEditor and start coding.
 
-All outputs go through **worksheet refactoring and migration**, then through **validation** — both structural and Tableau XSD validation. The final output is a .twb or .twbx file.
+Core engine: TWBEditor, made of four Mixins. ParametersMixin for parameters, ConnectionsMixin for data connections, ChartsMixin for charts, DashboardsMixin for dashboards.
 
-The key words at the end: **repeatable, verifiable, migratable**.
+Three subsystems below. Chart Builders — Basic, DualAxis, Pie, Text, Map, Recipes. Dashboard System — layouts, actions, dependencies. Analysis and Migration — migration tools, analyzer, capability registry.
 
-## 【P14】cwtwb vs Tableau Agent (Web)
+At the bottom, XML Engine based on lxml. Template goes through patch, validate, save — output is .twb or .twbx.
 
-Again, let me compare with the official tool — this time, Tableau Agent on the Web.
+## 【P16】cwtwb vs Tableau Agent (Web)
 
-The Web Agent can only create individual worksheets. It cannot build full dashboards. It does not support advanced formatting or parameters and sets.
+Let me compare again — this time with Tableau Agent on the Web.
 
-cwtwb can do **full dashboard orchestration**, **declarative layout and formatting**, and **XSD validation with versioning**.
+The Web Agent can only make worksheets. No full dashboards. No formatting. No parameters or sets. No data modeling.
 
-Basically, cwtwb fills the gaps that the official Agent leaves open — complex layouts and automated production.
+cwtwb can do **full dashboard orchestration**, **declarative layout and formatting**, **cross-source migration**, and **XSD validation with versioning**.
 
-## 【P15】cwtwb: One Sentence Intro
+cwtwb fills the gaps the official Agent leaves open — complex layouts and automated production.
 
-If I had to describe cwtwb in one sentence, it would be:
+## 【P17】cwtwb: One Sentence Intro
 
-**Turn Tableau workbooks into repeatable, verifiable, and migratable engineering assets.**
+One sentence: **turn Tableau workbooks into repeatable, verifiable, and migratable engineering assets.**
 
-Two key features: deterministic output — you get the same result every time, no manual errors. And verifiable delivery — structural and XSD validation ensures the file actually works.
+Four features: Generate — build TWB from code or agent calls. Validate — structural and XSD validation. Migrate — quickly move to new data sources. Orchestrate — chart and layout orchestration.
 
-The core idea: cwprep manages data flows, cwtwb manages dashboard generation. Together, they bring BI into scripts, version control, and batch production.
+15+ chart types, 50+ MCP tools. Three core values: deterministic output, verifiable delivery, ready for migration.
 
-## 【P16】cwtwb Cases & Closed-loop Demo
+## 【P18】cwtwb Cases & Closed-loop Demo
 
 Two more real cases.
 
-**Case 3: Declarative code with auto-fix.** This shows the 4-step Python workflow: the AI reads your database schema, generates code, runs the script, and — here's the interesting part — **automatically fixes bugs**. In the demo, it catches and corrects a case-sensitive filter error on its own.
+**Case 3: Declarative code with auto-fix.** Shows the 4-step Python workflow: the AI reads your database schema, writes code, runs the script, and **fixes bugs on its own**. In the demo, it catches a case-sensitive filter error and corrects it.
 
-**Case 4: End-to-end live dashboard rendering.** From a raw document to a working Tableau dashboard. You can watch the dashboard appear in real time, from nothing to a complete view. It's like hot-reloading a dashboard.
-
-Let's watch.
+**Case 4: End-to-end live rendering.** From a raw document to a working Tableau dashboard. You can watch the dashboard appear in real time — like hot-reloading a dashboard.
 
 > 【Play Video 5: Python Practice & Auto Bug Fix】
 
 > 【Play Video 6: Dashboard Live Rendering】
 
-## 【P17】datacooper.com
+## 【P19】datacooper.com
 
 Last part: datacooper.com.
 
-If cwprep and cwtwb are the core capabilities, then datacooper.com is where we turn them into tools that anyone can use — online.
+If cwprep and cwtwb are the core capabilities, then datacooper.com is where we turn them into tools anyone can use — online.
 
-## 【P18】datacooper Online Tool Prototypes
+## 【P20】datacooper Online Tool Prototypes
 
-The direction is simple: not just local scripts, but an online platform.
+The direction is simple: not just local scripts, but an online platform. All powered by the same Python SDK.
 
-We already have two working prototypes.
+Two working prototypes so far.
 
-The first is **layout parsing**. Upload a workbook, and it extracts the dashboard structure and exports it as JSON.
+First: **layout parsing**. Upload a workbook, it pulls out the dashboard structure, exports as JSON.
 
-The second is **KPI cloning**. Copy a KPI worksheet, swap only the metric, and keep everything else — the layout, the formatting, the structure. This is very useful in real BI work, because you rarely build a KPI from scratch. You usually copy a proven template and just change one number. This avoids the problems you get with Replace References.
+Second: **KPI cloning**. Copy a KPI worksheet, swap only the metric, keep everything else. This is very useful in real work, because you rarely build a KPI from scratch. You copy a proven template and just change one number.
 
-The long-term plan: turn common Tableau tasks into an online BI toolbox.
+Further out: collaboration and version management — a direction we are thinking about, not a current promise.
 
-## 【P19】Try It Out
+## 【P21】Try It Out
 
 Both tools are on PyPI. One line to install:
 
@@ -187,20 +211,28 @@ Both tools are on PyPI. One line to install:
 pip install cwprep cwtwb
 ```
 
-MCP servers also have their own commands: cwprep-mcp and cwtwb-mcp.
+MCP servers have their own commands: cwprep-mcp and cwtwb-mcp.
 
-Source code is on GitHub. Documentation and online tools are at datacooper.com. Everything is open source under AGPL-3.0. Feel free to star, try it out, and give us feedback.
+Source code is on GitHub. Docs and online tools are at datacooper.com. Open source under AGPL-3.0. Please star, try it, and give us feedback.
 
-## 【P20】Q&A / Discussion
+## 【P22】Acknowledgments
 
-That's the end of the formal part. Let's open it up — any questions or topics you'd like to discuss?
+Before I finish, I want to thank some people who helped me a lot on this journey.
 
-> 【Q&A, about 10 minutes】
+Patrick Therriault — for guiding me deeper into the Tableau community. Andy Cotgreave — for the insights that pushed this project forward. Adam Mico — for your patience and solid advice. Jeffrey Shaffer — the skills you suggested became very useful process constraints. Matthew Miller, Elif Tutuk, Paul Morgan, Olga L. — for the useful hints from an official perspective. Li-Lun Tu — for suggestions on building a brand. Alex Mou — for your encouragement and the advice in our conversations.
 
-## 【P21】Closing
+And everyone who left a comment or joined the discussion to keep me on the right track — thank you all.
 
-I'll leave you with one sentence:
+## 【P23】Closing
+
+I will leave you with one sentence:
 
 **Don't leave Tableau. Let AI give time back to humans.**
+
+## 【P24】Q&A / Discussion
+
+That's the end of the formal part. Any questions or topics you want to talk about? Let's discuss.
+
+> 【Q&A, about 10 minutes】
 
 Thank you.
