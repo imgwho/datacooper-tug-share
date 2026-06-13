@@ -609,22 +609,33 @@ class: text-center
 # 试试看
 
 <div class="mx-auto mt-6 max-w-3xl text-left">
-  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm">
-    <div class="font-mono text-base leading-8 text-foreground">
-      <div><span class="text-muted-foreground">$</span> pip install cwprep cwtwb</div>
-      <div class="mt-2"><span class="text-muted-foreground">$</span> cwprep-mcp <span class="text-xs text-muted-foreground"># 启动 cwprep MCP 服务器</span></div>
-      <div><span class="text-muted-foreground">$</span> cwtwb-mcp <span class="text-xs text-muted-foreground"># 启动 cwtwb MCP 服务器</span></div>
-    </div>
+  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 shadow-sm font-mono text-[13px] leading-6 text-foreground">
+    <div class="mb-2 text-muted-foreground"># 1. 安装 SDK</div>
+    <div><span class="text-muted-foreground">$</span> pip install cwprep</div>
+    <div><span class="text-muted-foreground">$</span> pip install cwtwb</div>
+    <div class="mt-4 mb-2 text-muted-foreground"># 2. 配置 MCP (Claude Desktop / Cursor)</div>
+    <pre class="bg-black/5 p-3 rounded-lg text-[11px] leading-relaxed whitespace-pre overflow-auto">
+{{ `{
+  "mcpServers": {
+    "cwprep": { "command": "uvx", "args": ["cwprep"] },
+    "cwtwb": { "command": "uvx", "args": ["cwtwb"] }
+  }
+}` }}
+    </pre>
   </div>
   <div class="mt-4 grid gap-3 md:grid-cols-2">
-    <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm">
-      <div class="text-sm font-semibold text-primary">GitHub</div>
-      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwprep / cwtwb</div>
-    </div>
-    <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm">
+    <a href="https://github.com/imgwho/cwprep" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+      <div class="text-sm font-semibold text-primary">GitHub: cwprep</div>
+      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwprep</div>
+    </a>
+    <a href="https://github.com/imgwho/cwtwb" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
+      <div class="text-sm font-semibold text-primary">GitHub: cwtwb</div>
+      <div class="mt-1 text-xs text-muted-foreground">github.com/imgwho/cwtwb</div>
+    </a>
+    <a href="https://datacooper.com" target="_blank" class="col-span-full rounded-[20px] border border-primary/50 bg-white/50 p-4 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">datacooper.com</div>
       <div class="mt-1 text-xs leading-5 text-muted-foreground">在线工具 · 文档 · 社区</div>
-    </div>
+    </a>
   </div>
 </div>
 
