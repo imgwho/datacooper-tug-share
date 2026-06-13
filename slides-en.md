@@ -14,15 +14,15 @@ background: "#e9e6dc"
 
 <div class="min-h-[80vh] px-8 py-6 md:px-16">
   <div class="mx-auto flex min-h-[80vh] max-w-[1180px] items-start pt-4 md:pt-6">
-    <div v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0 }" class="w-full rounded-[40px] border border-primary/50 
-        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),rgba(255,255,255,0.5)] px-8 py-8 shadow-sm md:px-12 md:py-10">
-      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-sm">
+    <div v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0 }" class="w-full rounded-[20px] border border-primary/50
+        bg-[radial-gradient(circle_at_top_right,oklch(61.71%_.1375_39.0427_/_0.12),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(233,230,220,0.8),transparent_30%),rgba(255,255,255,0.5)] px-4 py-4 shadow-sm sm:rounded-[40px] sm:px-8 sm:py-8 md:px-12 md:py-10">
+      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary shadow-sm sm:px-4 sm:py-2 sm:text-xs">
         Datacooper · Tableau User Group Sharing
       </div>
-      <h1 class="mt-4 max-w-5xl text-5xl font-black tracking-[-0.05em] leading-[0.94] text-primary md:text-6xl">
+      <h1 class="mt-3 max-w-5xl text-3xl font-black tracking-[-0.05em] leading-[0.94] text-primary sm:mt-4 sm:text-5xl md:text-6xl">
         From Manual Dragging to Engineering BI
       </h1>
-      <p class="mt-4 max-w-4xl text-base leading-7 text-muted-foreground md:text-xl md:leading-relaxed">
+      <p class="mt-2 max-w-4xl text-sm leading-6 text-muted-foreground sm:mt-4 sm:text-base sm:leading-7 md:text-xl md:leading-relaxed">
         <strong class="text-foreground">cwprep</strong> automates Tableau Prep flows, 
         <strong class="text-foreground">cwtwb</strong> handles engineering generation of Tableau Workbooks, 
         <strong class="text-foreground">datacooper.com</strong> builds these into user-friendly online tools.
@@ -44,7 +44,7 @@ layout: center
 
 # Agenda
 
-<div class="mx-auto mt-6 grid max-w-5xl gap-4 md:grid-cols-2">
+<div class="mx-auto mt-6 grid max-w-5xl gap-4 grid-cols-2">
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <div class="text-3xl font-black text-primary opacity-40">01</div>
     <h3 class="mt-1 text-lg font-bold text-foreground">Background & Positioning</h3>
@@ -98,7 +98,7 @@ class: text-center
 
 # Tableau's Position in the Data Analytics Lifecycle
 
-<div class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-5">
+<div class="mx-auto mt-4 grid max-w-6xl gap-2 sm:mt-8 sm:gap-4 grid-cols-5">
   <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 p-4 shadow-sm">
     <div class="text-sm font-semibold text-primary">1. Data Ingestion</div>
     <div class="mt-2 text-sm leading-6 text-muted-foreground">DB, Excel, CSV, API</div>
@@ -143,13 +143,13 @@ class: text-center
     The most time-consuming part in Tableau isn't "drawing a chart," but doing these mechanical tasks repeatedly.
   </div>
 
-  <div class="mt-6 grid gap-4 md:grid-cols-3">
-    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly dragging fields</div>
-    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly adjusting layouts</div>
-    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly copying KPI modules</div>
-    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly migrating workbooks</div>
-    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly checking if files open correctly</div>
-    <div v-click class="rounded-[22px] border border-primary/50 bg-white/50 px-6 py-5 text-lg font-medium text-foreground shadow-sm">Repeatedly fixing small issues</div>
+  <div class="mt-4 grid gap-2 md:mt-6 grid-cols-3 md:gap-4">
+    <div v-click class="rounded-[14px] border border-primary/50 bg-white/50 px-4 py-3 text-sm font-medium text-foreground shadow-sm sm:rounded-[22px] sm:px-6 sm:py-5 sm:text-lg">Repeatedly dragging fields</div>
+    <div v-click class="rounded-[14px] border border-primary/50 bg-white/50 px-4 py-3 text-sm font-medium text-foreground shadow-sm sm:rounded-[22px] sm:px-6 sm:py-5 sm:text-lg">Repeatedly adjusting layouts</div>
+    <div v-click class="rounded-[14px] border border-primary/50 bg-white/50 px-4 py-3 text-sm font-medium text-foreground shadow-sm sm:rounded-[22px] sm:px-6 sm:py-5 sm:text-lg">Repeatedly copying KPI modules</div>
+    <div v-click class="rounded-[14px] border border-primary/50 bg-white/50 px-4 py-3 text-sm font-medium text-foreground shadow-sm sm:rounded-[22px] sm:px-6 sm:py-5 sm:text-lg">Repeatedly migrating workbooks</div>
+    <div v-click class="rounded-[14px] border border-primary/50 bg-white/50 px-4 py-3 text-sm font-medium text-foreground shadow-sm sm:rounded-[22px] sm:px-6 sm:py-5 sm:text-lg">Repeatedly checking if files open correctly</div>
+    <div v-click class="rounded-[14px] border border-primary/50 bg-white/50 px-4 py-3 text-sm font-medium text-foreground shadow-sm sm:rounded-[22px] sm:px-6 sm:py-5 sm:text-lg">Repeatedly fixing small issues</div>
   </div>
 
   <div class="mt-6 rounded-[24px] border border-primary/50 bg-white/50 px-6 py-5 text-base leading-7 text-foreground shadow-sm text-center">
@@ -163,7 +163,7 @@ layout: center
 
 # Paradigm Shift & Quick Generation Demo
 
-<div class="grid grid-cols-2 gap-4 mt-4 text-left">
+<div class="grid grid-cols-1 gap-3 grid-cols-2 sm:gap-4 mt-4 text-left">
   <!-- Left: Paradigm Comparison -->
   <div class="space-y-4">
     <div class="p-4 border border-primary/50 rounded-[24px] bg-white/50 shadow-sm">
@@ -210,7 +210,7 @@ class: text-center
 
 # Who Is This For?
 
-<div class="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
+<div class="mx-auto mt-4 grid max-w-5xl gap-2 sm:mt-8 sm:gap-4 grid-cols-3">
   <div v-click class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <h3 class="mt-2 text-lg font-bold text-foreground">Tableau Analysts</h3>
     <p class="mt-2 text-sm leading-6 text-muted-foreground">Less repetitive dragging and copying — more time for insights and business judgment.</p>
@@ -237,7 +237,7 @@ layout: default
 
 # cwprep: One Sentence Intro
 
-<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-[1.05fr_0.95fr] gap-4">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
@@ -247,7 +247,7 @@ layout: default
         One sentence in, one working Tableau Prep .tfl / .tflx file out.
       </h2>
     </div>
-    <div class="mt-4 grid gap-2 md:grid-cols-2">
+    <div class="mt-4 grid gap-2 grid-cols-2">
       <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">Text-to-PrepFlow</div>
         <div class="mt-1 leading-6 text-muted-foreground">Describe your data logic in natural language.</div>
@@ -352,8 +352,7 @@ class: text-center
 
 # cwprep vs Tableau Agent
 
-<div class="mx-auto mt-4 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
-  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+<div class="mx-auto mt-4 grid max-w-5xl gap-3 grid-cols-[1fr_auto_1fr] md:gap-4">  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <h3 class="text-lg font-bold text-foreground">Tableau Agent</h3>
     <ul class="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
       <li>Closed-source, official product</li>
@@ -391,7 +390,7 @@ layout: center
 
 # cwprep Typical Cases & Quick Demo
 
-<div class="grid grid-cols-2 gap-6 mt-4 text-left">
+<div class="grid grid-cols-2 gap-4 sm:gap-6 mt-4 text-left">
   <div class="space-y-4">
     <div class="p-6 border border-primary/50 rounded-[28px] bg-white/50 shadow-sm">
       <h3 class="text-xl font-bold mb-3 text-primary">Case 1: Zero Barrier Generation</h3>
@@ -493,8 +492,7 @@ class: text-center
 
 # cwtwb vs Tableau Agent (Web)
 
-<div class="mx-auto mt-4 grid max-w-5xl gap-4 md:grid-cols-[1fr_auto_1fr]">
-  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
+<div class="mx-auto mt-4 grid max-w-5xl gap-3 grid-cols-[1fr_auto_1fr] md:gap-4">  <div class="rounded-[24px] border border-primary/50 bg-white/50 p-6 text-left shadow-sm">
     <h3 class="text-lg font-bold text-foreground">Tableau Agent (Web)</h3>
     <ul class="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
       <li>Limited to Worksheets only</li>
@@ -532,7 +530,7 @@ layout: default
 
 # cwtwb: One Sentence Intro
 
-<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-[1.05fr_0.95fr] gap-4">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
@@ -542,7 +540,7 @@ layout: default
         Turning Tableau workbooks into repeatable, verifiable, and migratable assets.
       </h2>
     </div>
-    <div class="mt-4 grid gap-2 md:grid-cols-2">
+    <div class="mt-4 grid gap-2 grid-cols-2">
       <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
         <div class="font-semibold text-primary">Generate</div>
         <div class="mt-1 leading-6 text-muted-foreground">Generate TWB from code or agent calls.</div>
@@ -597,7 +595,7 @@ layout: center
 
 # cwtwb Cases & Closed-loop Demo
 
-<div class="grid grid-cols-2 gap-6 mt-4 text-left">
+<div class="grid grid-cols-2 gap-4 sm:gap-6 mt-4 text-left">
   <div class="space-y-4">
     <div class="p-6 border border-primary/50 rounded-[28px] bg-white/50 shadow-sm">
       <h3 class="text-xl font-bold mb-3 text-primary">Case 3: Declarative Code & Auto Fix</h3>
@@ -649,7 +647,7 @@ layout: default
 
 # datacooper Online Tool Prototypes
 
-<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
+<div class="grid grid-cols-[1.05fr_0.95fr] gap-4">
   <div class="flex flex-col justify-between">
     <div>
       <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
@@ -714,7 +712,7 @@ class: text-center
 }` }}
     </pre>
   </div>
-  <div class="mt-3 grid gap-3 md:grid-cols-2">
+  <div class="mt-3 grid gap-3 grid-cols-2">
     <a href="https://github.com/imgwho/cwprep" target="_blank" class="rounded-[20px] border border-primary/50 bg-white/50 px-4 py-3 text-left shadow-sm hover:bg-primary/5 transition-colors no-underline">
       <div class="text-sm font-semibold text-primary">GitHub: cwprep</div>
       <div class="mt-0.5 text-xs text-muted-foreground">github.com/imgwho/cwprep</div>
@@ -737,7 +735,7 @@ layout: center
 # Acknowledgments
 
 <div class="mx-auto mt-4 max-w-4xl space-y-3 text-left">
-  <div class="grid gap-3 md:grid-cols-2">
+  <div class="grid gap-3 grid-cols-2">
     <div class="rounded-[20px] border border-primary/50 bg-white/50 px-5 py-4 shadow-sm">
       <div class="text-sm font-bold text-foreground">Patrick Therriault</div>
       <div class="mt-1 text-xs leading-5 text-muted-foreground">For guiding me deeper into this amazing Tableau community</div>

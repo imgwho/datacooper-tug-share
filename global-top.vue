@@ -1,18 +1,18 @@
 <template>
-  <div class="fixed bottom-6 right-6 z-50 flex gap-2">
-    <a 
+  <div class="fixed bottom-3 right-3 z-50 flex gap-2 sm:bottom-6 sm:right-6">
+    <a
       v-if="isEn"
-      href="../" 
-      class="flex h-10 items-center justify-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 text-xs font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95"
+      href="../"
+      class="flex h-8 items-center justify-center gap-1.5 rounded-full border border-primary/50 bg-white/50 px-3 text-[10px] font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95 sm:h-10 sm:gap-2 sm:px-4 sm:text-xs"
     >
-      <span class="text-base">🇨🇳</span> 中文版
+      <span class="text-sm sm:text-base">🇨🇳</span> 中文版
     </a>
-    <a 
+    <a
       v-else
-      href="en/" 
-      class="flex h-10 items-center justify-center gap-2 rounded-full border border-primary/50 bg-white/50 px-4 text-xs font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95"
+      href="en/"
+      class="flex h-8 items-center justify-center gap-1.5 rounded-full border border-primary/50 bg-white/50 px-3 text-[10px] font-bold tracking-widest text-primary uppercase shadow-sm backdrop-blur-md transition-all hover:bg-white/80 active:scale-95 sm:h-10 sm:gap-2 sm:px-4 sm:text-xs"
     >
-      <span class="text-base">🇺🇸</span> English
+      <span class="text-sm sm:text-base">🇺🇸</span> English
     </a>
   </div>
 </template>
@@ -226,6 +226,88 @@ const isEn = computed(() => {
   .slidev-layout h4 {
     color: var(--foreground);
     letter-spacing: -0.03em;
+  }
+}
+
+@media (max-width: 640px) {
+  .slidev-layout {
+    padding: 0.5rem !important;
+    font-size: 0.7rem;
+    overflow: hidden;
+    scrollbar-width: none;
+  }
+
+  .slidev-layout::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slidev-layout h1,
+  .slidev-layout .h1 {
+    font-size: 1.4rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .slidev-layout h2 {
+    font-size: 1.1rem !important;
+  }
+
+  .slidev-layout h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .big-diagram .mermaid {
+    transform: scale(0.65);
+    margin: 10px 0;
+  }
+
+  .slidev-layout pre {
+    font-size: 0.55rem !important;
+    padding: 0.4rem !important;
+  }
+
+  .slidev-layout [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .slidev-layout .grid {
+    gap: 0.35rem;
+  }
+
+  .slidev-layout .rounded-\[40px\],
+  .slidev-layout .rounded-\[28px\],
+  .slidev-layout .rounded-\[24px\],
+  .slidev-layout .rounded-\[22px\],
+  .slidev-layout .rounded-\[20px\],
+  .slidev-layout .rounded-\[14px\] {
+    border-radius: 8px;
+  }
+
+  .slidev-layout .grid > * {
+    padding: 0.5rem !important;
+  }
+
+  .slidev-layout .grid .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .slidev-layout .text-lg {
+    font-size: 0.8rem !important;
+  }
+
+  .slidev-layout .text-xl {
+    font-size: 0.85rem !important;
+  }
+
+  .slidev-layout .aspect-video {
+    max-height: 140px;
+  }
+
+  .slidev-layout [style*="grid-cols-[1fr_auto_1fr]"] > [class*="items-center"] {
+    display: none !important;
+  }
+
+  .slidev-layout [class*="min-h-"] {
+    min-height: 0 !important;
   }
 }
 </style>
