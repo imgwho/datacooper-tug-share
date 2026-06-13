@@ -167,7 +167,7 @@ cwtwb fills the gaps the official Agent leaves open — complex layouts and auto
 
 ## 【P17】cwtwb: One Sentence Intro
 
-One sentence: **turn Tableau workbooks into repeatable, verifiable, and migratable engineering assets.**
+One sentence: **dashboards that take hours to drag-and-drop — AI builds from scratch in one prompt. cwtwb makes every Tableau user 10× faster.**
 
 Four features: Generate — build TWB from code or agent calls. Validate — structural and XSD validation. Migrate — quickly move to new data sources. Orchestrate — chart and layout orchestration.
 

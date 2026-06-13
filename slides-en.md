@@ -537,7 +537,7 @@ layout: default
         One Sentence
       </div>
       <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
-        Turning Tableau workbooks into repeatable, verifiable, and migratable assets.
+        Dashboards that take hours to drag-and-drop — AI builds from scratch in one prompt. cwtwb makes every Tableau user 10× faster.
       </h2>
     </div>
     <div class="mt-4 grid gap-2 grid-cols-2">

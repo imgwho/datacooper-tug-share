@@ -487,7 +487,7 @@ layout: default
         一句话
       </div>
       <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
-        把 Tableau workbook 变成可复现、可验证、可迁移的工程产物。
+        手工拖半天的仪表板，AI 一句话从零生成——cwtwb 让每个 Tableau 用户都提速 10 倍。
       </h2>
     </div>
     <div class="mt-4 grid gap-2 grid-cols-2">
