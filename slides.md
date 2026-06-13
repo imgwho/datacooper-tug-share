@@ -548,13 +548,13 @@ layout: center
 <div class="grid grid-cols-2 gap-4 sm:gap-6 mt-4 text-left">
   <div class="space-y-4">
     <div class="p-6 border border-primary/50 rounded-[28px] bg-white/50 shadow-sm">
-      <h3 class="text-xl font-bold mb-3 text-primary">案例 3：声明式代码与自动纠错</h3>
+      <h3 class="text-xl font-bold mb-3 text-primary">案例 3：MCP 驱动的 AI 看板生成</h3>
       <p class="text-sm leading-relaxed text-muted-foreground">
-        演示 Python 开发框架的 4 步流程：感知架构、生成代码、运行脚本、自动纠错（Bug Fix）。
+        只需配置 MCP 服务、提供数据源和模板，输入需求，AI 自动规划布局并生成 Tableau 文件（.twb）。
       </p>
       <ul class="mt-3 space-y-1 text-xs text-foreground font-medium">
-        <li>✅ AI 感知数据库 Schema / ER 图</li>
-        <li>✅ <strong>亮点：</strong> Agent 自动修正大小写敏感错误</li>
+        <li>✅ 零代码：自然语言描述需求即可生成看板</li>
+        <li>✅ <strong>亮点：</strong> AI 自动规划布局，从需求到 .twb 一步到位</li>
       </ul>
     </div>
     <div class="p-6 border border-primary/50 rounded-[28px] bg-white/50 shadow-sm">
@@ -572,9 +572,9 @@ layout: center
   <div class="grid grid-cols-1 gap-4">
     <div class="rounded-2xl border border-primary/30 bg-white/50 p-3 shadow-md">
       <div class="aspect-video rounded-xl overflow-hidden bg-black mb-2">
-        <Youtube id="dNzMbLOEA7A" width="100%" height="100%" />
+        <Youtube id="tTl8qMWgKkw" width="100%" height="100%" />
       </div>
-      <h4 class="font-bold text-xs text-center">视频演示：Python 实战与自动纠错</h4>
+      <h4 class="font-bold text-xs text-center">视频演示：MCP 驱动的 AI 看板生成</h4>
     </div>
     <div class="rounded-2xl border border-primary/30 bg-white/50 p-3 shadow-md">
       <div class="aspect-video rounded-xl overflow-hidden bg-black mb-2">

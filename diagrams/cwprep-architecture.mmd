@@ -1,0 +1,35 @@
+flowchart TD
+  subgraph Interfaces["Interfaces"]
+    direction LR
+    MCP["MCP Server\n(tools · resources · prompts)\nClaude / Cursor / VSCode / Gemini"]
+    PY["Python Library\nfrom cwprep import TFLBuilder, TFLPackager\nbuilder.add_...() / builder.build()"]
+  end
+
+  subgraph Core["TFLBuilder"]
+    direction LR
+    SDK["TFLBuilder · TFLPackager · SQLTranslator · ExpressionTranslator"]
+  end
+
+  subgraph Operations["Operations"]
+    direction LR
+    DS["Data Sources\nMySQL · PostgreSQL · SQL Server\nExcel · CSV · SQL"]
+    TF["Transformations\nJoin · Union · Filter · Rename\nCalculation · Change Type · Pivot"]
+    AN["Analytics & Output\nAggregate · Unpivot\nSQL Translation · TFLX Packaging"]
+  end
+
+  subgraph Validation["Validation & Packaging"]
+    direction LR
+    VL["validate_flow_definition → build → save_tfl / save_tflx"]
+  end
+
+  OUT[".tfl / .tflx"]
+
+  MCP --> Core
+  PY --> Core
+  Core --> DS
+  Core --> TF
+  Core --> AN
+  DS --> VL
+  TF --> VL
+  AN --> VL
+  VL --> OUT

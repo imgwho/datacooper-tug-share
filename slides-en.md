@@ -598,13 +598,13 @@ layout: center
 <div class="grid grid-cols-2 gap-4 sm:gap-6 mt-4 text-left">
   <div class="space-y-4">
     <div class="p-6 border border-primary/50 rounded-[28px] bg-white/50 shadow-sm">
-      <h3 class="text-xl font-bold mb-3 text-primary">Case 3: Declarative Code & Auto Fix</h3>
+      <h3 class="text-xl font-bold mb-3 text-primary">Case 3: AI Dashboard Generation via MCP</h3>
       <p class="text-sm leading-relaxed text-muted-foreground">
-        Python framework demo: Schema awareness, code generation, script execution, and automatic bug fixing.
+        Just configure the MCP server with your data source and template, describe what you need, and AI generates a Tableau file (.twb) with auto-planned layouts.
       </p>
       <ul class="mt-3 space-y-1 text-xs text-foreground font-medium">
-        <li>✅ AI perceives DB Schema / ER diagrams</li>
-        <li>✅ <strong>Highlight:</strong> Agent auto-fixes case-sensitive filter bugs</li>
+        <li>✅ Zero code: describe your dashboard in plain language</li>
+        <li>✅ <strong>Highlight:</strong> AI plans the layout and delivers a .twb in one shot</li>
       </ul>
     </div>
     <div class="p-6 border border-primary/50 rounded-[28px] bg-white/50 shadow-sm">
@@ -622,9 +622,9 @@ layout: center
   <div class="grid grid-cols-1 gap-4">
     <div class="rounded-2xl border border-primary/30 bg-white/50 p-3 shadow-md">
       <div class="aspect-video rounded-xl overflow-hidden bg-black mb-2">
-        <Youtube id="dNzMbLOEA7A" width="100%" height="100%" />
+        <Youtube id="tTl8qMWgKkw" width="100%" height="100%" />
       </div>
-      <h4 class="font-bold text-xs text-center">Demo: Python Practice & Auto Bug Fix</h4>
+      <h4 class="font-bold text-xs text-center">Demo: AI Dashboard Generation via MCP</h4>
     </div>
     <div class="rounded-2xl border border-primary/30 bg-white/50 p-3 shadow-md">
       <div class="aspect-video rounded-xl overflow-hidden bg-black mb-2">

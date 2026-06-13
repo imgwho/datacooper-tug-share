@@ -1,0 +1,35 @@
+flowchart TD
+  subgraph Interfaces["Interfaces"]
+    direction LR
+    MCP["MCP Server\n(tools_workbook)\nClaude / Cursor / VSCode / Claude Code"]
+    PY["Python Library\nfrom cwtwb.twb_editor import TWBEditor\neditor.add_...() / configure_...() / save(...)"]
+  end
+
+  subgraph Core["TWBEditor"]
+    direction LR
+    MX["ParametersMixin · ConnectionsMixin · ChartsMixin · DashboardsMixin"]
+  end
+
+  subgraph Subsystems["Subsystems"]
+    direction LR
+    CB["Chart Builders\nBasic · DualAxis · Pie\nText · Map · Recipes"]
+    DS["Dashboard System\nlayouts · actions\ndependencies"]
+    AM["Analysis & Migration\nmigration.py · twb_analyzer.py\ncapability_registry"]
+  end
+
+  subgraph Foundation["XML Engine (lxml)"]
+    direction LR
+    XE["template.twb / .twbx → patch → validate → save"]
+  end
+
+  OUT["output.twb / output.twbx"]
+
+  MCP --> Core
+  PY --> Core
+  Core --> CB
+  Core --> DS
+  Core --> AM
+  CB --> XE
+  DS --> XE
+  AM --> XE
+  XE --> OUT

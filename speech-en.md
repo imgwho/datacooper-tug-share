@@ -177,11 +177,11 @@ Four features: Generate — build TWB from code or agent calls. Validate — str
 
 Two more real cases.
 
-**Case 3: Declarative code with auto-fix.** Shows the 4-step Python workflow: the AI reads your database schema, writes code, runs the script, and **fixes bugs on its own**. In the demo, it catches a case-sensitive filter error and corrects it.
+**Case 3: AI dashboard generation via MCP.** Just configure the MCP server with your data source and template, describe what you need, and AI auto-plans the layout and generates a Tableau file. Zero code — plain language in, .twb out.
 
 **Case 4: End-to-end live rendering.** From a raw document to a working Tableau dashboard. You can watch the dashboard appear in real time — like hot-reloading a dashboard.
 
-> 【Play Video 5: Python Practice & Auto Bug Fix】
+> 【Play Video 5: AI Dashboard Generation via MCP】
 
 > 【Play Video 6: Dashboard Live Rendering】
 
