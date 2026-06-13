@@ -191,6 +191,71 @@ layout: section
 # cwprep
 
 ---
+layout: default
+---
+
+# cwprep: One Sentence Intro
+
+<div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
+  <div class="flex flex-col justify-between">
+    <div>
+      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+        One Sentence
+      </div>
+      <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
+        One sentence in, one working Tableau Prep .tfl / .tflx file out.
+      </h2>
+    </div>
+    <div class="mt-4 grid gap-2 md:grid-cols-2">
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+        <div class="font-semibold text-primary">Text-to-PrepFlow</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Describe your data logic in natural language.</div>
+      </div>
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+        <div class="font-semibold text-primary">MCP Integration</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Works with Claude, Gemini, Cursor, and more.</div>
+      </div>
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+        <div class="font-semibold text-primary">No GUI Dependency</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Build flows without opening Tableau Prep.</div>
+      </div>
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+        <div class="font-semibold text-primary">Auditable</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Translate flows to SQL for DBA / compliance review.</div>
+      </div>
+    </div>
+    <div v-click class="mt-3 flex flex-wrap gap-2">
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">22 Flow Operations</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">4 Databases</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">SQL Translation</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">TFLX Packaging</span>
+    </div>
+  </div>
+  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
+    <div v-click class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+      Core Value
+    </div>
+    <p v-click class="mt-3 text-sm leading-6 text-muted-foreground">
+      cwprep manages "how data flows", cwtwb manages "how dashboards are generated".
+    </p>
+    <div class="mt-3 grid gap-2">
+      <div v-click class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Speed</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Automate repetitive Prep flow building.</div>
+      </div>
+      <div v-click class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Consistency</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Codify common rules, reduce human error.</div>
+      </div>
+      <div v-click class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Engineering Collaboration</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Bring data cleaning into scripts, version control, and batch pipelines.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
 layout: center
 class: text-center
 ---
@@ -230,6 +295,9 @@ class: text-center
       <li>No Join / Union support</li>
       <li>No SQL export</li>
     </ul>
+    <div class="mt-4 text-[8px] break-all text-muted-foreground opacity-60">
+      Source: <a href="https://help.tableau.com/current/prep/en-us/prep_einstein.htm" target="_blank" class="hover:text-primary transition-colors">https://help.tableau.com/current/prep/en-us/prep_einstein.htm</a>
+    </div>
   </div>
   <div class="flex items-center justify-center">
     <div class="text-2xl font-black text-primary">VS</div>
@@ -244,6 +312,10 @@ class: text-center
       <li class="text-primary font-bold">✅ Flow → SQL Translation</li>
     </ul>
   </div>
+</div>
+
+<div class="mx-auto mt-5 max-w-3xl rounded-[20px] border border-primary/50 bg-white/50 px-5 py-3 text-sm leading-6 text-foreground shadow-sm">
+  Feature coverage reaches <strong class="text-primary">88%</strong>, with exclusive Join, Union, and SQL translation capabilities.
 </div>
 
 ---
@@ -337,7 +409,11 @@ class: text-center
       <li>Cannot build Dashboards</li>
       <li>No advanced formatting support</li>
       <li>No support for Params/Sets</li>
+      <li>No data modeling (Join/Relation)</li>
     </ul>
+    <div class="mt-4 text-[8px] break-all text-muted-foreground opacity-60">
+      Source: <a href="https://help.tableau.com/current/online/en-us/web_author_einstein.htm" target="_blank" class="hover:text-primary transition-colors">https://help.tableau.com/current/online/en-us/web_author_einstein.htm</a>
+    </div>
   </div>
   <div class="flex items-center justify-center">
     <div class="text-2xl font-black text-primary">VS</div>
@@ -347,9 +423,15 @@ class: text-center
     <ul class="mt-3 space-y-2 text-sm leading-6 text-foreground font-medium">
       <li class="text-primary font-bold">✅ Full Dashboard Orchestration</li>
       <li class="text-primary font-bold">✅ Declarative Layout & Formatting</li>
+      <li class="text-primary font-bold">✅ Cross-source Data Migration</li>
       <li class="text-primary font-bold">✅ XSD Validation & Versioning</li>
+      <li>Offline / automated batch production</li>
     </ul>
   </div>
+</div>
+
+<div class="mx-auto mt-5 max-w-3xl rounded-[20px] border border-primary/50 bg-white/50 px-5 py-3 text-sm leading-6 text-foreground shadow-sm">
+  cwtwb is an **"Engineering BI Generator"**, filling the gaps of the official Agent in complex layouts and automated production.
 </div>
 
 ---
@@ -360,26 +442,60 @@ layout: default
 
 <div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
-    <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
-      Turning Tableau workbooks into repeatable, verifiable, and migratable assets.
-    </h2>
+    <div>
+      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+        One Sentence
+      </div>
+      <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
+        Turning Tableau workbooks into repeatable, verifiable, and migratable assets.
+      </h2>
+    </div>
     <div class="mt-4 grid gap-2 md:grid-cols-2">
       <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
-        <div class="font-semibold text-primary">Deterministic Output</div>
-        <div class="mt-1 leading-6 text-muted-foreground">Stable results, no manual error.</div>
+        <div class="font-semibold text-primary">Generate</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Generate TWB from code or agent calls.</div>
       </div>
       <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
-        <div class="font-semibold text-primary">Verifiable Delivery</div>
-        <div class="mt-1 leading-6 text-muted-foreground">XSD validation ensures files open.</div>
+        <div class="font-semibold text-primary">Validate</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Structural + XSD validation.</div>
+      </div>
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+        <div class="font-semibold text-primary">Migrate</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Quickly migrate to new data sources.</div>
+      </div>
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm text-sm">
+        <div class="font-semibold text-primary">Orchestrate</div>
+        <div class="mt-1 leading-6 text-muted-foreground">Chart and Layout orchestration.</div>
       </div>
     </div>
+    <div v-click class="mt-3 flex flex-wrap gap-2">
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">15+ Chart Types</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">50+ MCP Tools</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">XSD Validation</span>
+      <span class="rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-xs font-medium text-foreground shadow-sm">Declarative Layout</span>
+    </div>
   </div>
-  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm text-sm text-muted-foreground flex flex-col justify-center">
-    <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-primary mb-4">
+  <div class="rounded-[28px] border border-primary/50 bg-white/50 p-5 shadow-sm">
+    <div v-click class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
       Core Value
     </div>
-    cwprep manages data flows, cwtwb manages dashboard generation. 
-    Integrating BI into scripts, version control, and batch production.
+    <p v-click class="mt-3 text-sm leading-6 text-muted-foreground">
+      cwprep manages "how data flows", cwtwb manages "how dashboards are generated".
+    </p>
+    <div class="mt-3 grid gap-2">
+      <div v-click class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Deterministic Output</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Stable, reproducible results.</div>
+      </div>
+      <div v-click class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Verifiable Delivery</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Can inspect, can open.</div>
+      </div>
+      <div v-click class="rounded-[18px] border border-primary/50 bg-white/50 px-4 py-3 shadow-sm">
+        <div class="text-sm font-semibold text-primary">Migration Ready</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">No need to rebuild from scratch.</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -444,24 +560,41 @@ layout: default
 <div class="grid grid-cols-1 gap-4" style="grid-template-columns: 1.05fr 0.95fr">
   <div class="flex flex-col justify-between">
     <div>
+      <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+        Future Direction
+      </div>
       <h2 class="mt-3 text-3xl font-black tracking-[-0.04em] text-foreground md:text-4xl">
-        Building a platform, not just scripts.
+        Building these capabilities into an online platform, not just local scripts.
       </h2>
+      <p v-click class="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
+        Not just moving commands to a webpage — turning common BI actions into upload-and-go online workbenches. All powered by a shared Python SDK.
+      </p>
     </div>
-    <div class="mt-4 grid grid-cols-2 gap-2">
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm shadow-sm">Online Access</div>
-      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm shadow-sm">Code-to-Tool</div>
+    <div v-click class="mt-4 grid grid-cols-2 gap-2">
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Online Access</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Direct File Processing</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Lower Barrier</div>
+      <div class="rounded-[18px] border border-primary/50 bg-white/50 p-3 text-sm leading-6 shadow-sm">Code-to-Tool</div>
     </div>
   </div>
   <div class="rounded-[28px] border border-primary/50 bg-white/50 p-6 shadow-sm">
-    <div class="space-y-3">
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
+    <div v-click class="inline-flex items-center gap-2 rounded-full border border-primary/50 bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-secondary-foreground">
+      Two Tool Prototypes
+    </div>
+    <div class="mt-4 space-y-3">
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
         <div class="text-sm font-semibold text-primary">Layout Parsing</div>
-        <div class="mt-1 text-xs text-muted-foreground">Extract dashboard structures, export to JSON.</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Extract dashboard structures, export to JSON.</div>
       </div>
-      <div class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
+      <div v-click class="rounded-[20px] border border-primary/50 bg-white/50 p-4 shadow-sm">
         <div class="text-sm font-semibold text-primary">KPI Cloning</div>
-        <div class="mt-1 text-xs text-muted-foreground">Clone KPI sheets, swap metrics only, preserve styles.</div>
+        <div class="mt-1 text-xs leading-5 text-muted-foreground">Clone KPI sheets, swap metrics only, preserve styles.</div>
+      </div>
+    </div>
+    <div v-click class="mt-4 rounded-[20px] border border-dashed border-primary/50 bg-white/50 px-4 py-3">
+      <div class="text-xs font-semibold text-primary">Further Out</div>
+      <div class="mt-1 text-xs leading-5 text-muted-foreground">
+        Collaboration & version management — aspirational direction, not a current commitment.
       </div>
     </div>
   </div>
