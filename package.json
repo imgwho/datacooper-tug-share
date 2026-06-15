@@ -1,19 +1,19 @@
 {
-  "name": "20260513-datacooper-tug-share",
+  "name": "datacooper-talks",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "dev": "slidev slides.md --open",
-    "dev:en": "slidev slides-en.md --open",
-    "build": "pnpm build:cn && pnpm build:en",
-    "build:cn": "slidev build slides.md --out dist --base /datacooper-tug-share/",
-    "build:en": "slidev build slides-en.md --out dist/en --base /datacooper-tug-share/en/",
-    "preview:build": "pnpm preview:build:cn && pnpm preview:build:en",
-    "preview:build:cn": "slidev build slides.md --out dist-local --base /",
-    "preview:build:en": "slidev build slides-en.md --out dist-local/en --base /en/",
-    "preview": "npx serve dist-local",
-    "export": "slidev export"
+    "dev:tug": "slidev talks/datacooper-tug-share/slides.md --open",
+    "dev:tug:en": "slidev talks/datacooper-tug-share/slides-en.md --open",
+    "build:tug": "pnpm build:tug:cn && pnpm build:tug:en",
+    "build:tug:cn": "slidev build talks/datacooper-tug-share/slides.md --out dist/tug --base /datacooper-tug-share/",
+    "build:tug:en": "slidev build talks/datacooper-tug-share/slides-en.md --out dist/tug/en --base /datacooper-tug-share/en/",
+    "preview:tug:build": "pnpm preview:tug:build:cn && pnpm preview:tug:build:en",
+    "preview:tug:build:cn": "slidev build talks/datacooper-tug-share/slides.md --out dist-local/tug --base /",
+    "preview:tug:build:en": "slidev build talks/datacooper-tug-share/slides-en.md --out dist-local/tug/en --base /en/",
+    "preview:tug": "npx serve dist-local/tug",
+    "export:tug": "slidev export talks/datacooper-tug-share/slides.md"
   },
   "dependencies": {
     "@slidev/cli": "^52.8.0",

@@ -1,8 +1,19 @@
-# From Manual Dragging to Engineering BI
+# Datacooper Talks
 
-This repository contains the slides for the Tableau User Group sharing session about `cwprep`, `cwtwb`, and `datacooper.com`.
+Slidev presentations for Tableau User Group sharing sessions about `cwprep`, `cwtwb`, and `datacooper.com`.
 
 ---
+
+## Project Structure
+
+```
+talks/
+├── datacooper-tug-share/    # Tableau User Group sharing (2026-05-13)
+│   ├── slides.md            # 中文版幻灯片
+│   ├── slides-en.md         # English slides
+│   ├── speech.md            # 演讲稿
+│   └── speech-en.md         # Speech script
+```
 
 ## Live Preview (Online)
 
@@ -13,10 +24,18 @@ This repository contains the slides for the Tableau User Group sharing session a
 
 ```bash
 # Preview Chinese Version
-npm run dev
+pnpm dev:tug
 
 # Preview English Version
-npm run dev:en
+pnpm dev:tug:en
+```
+
+## Adding a New Talk
+
+```bash
+mkdir talks/yyyy-mm-dd-topic-name
+# Create slides.md, slides-en.md, speech.md, speech-en.md
+# Add scripts to package.json (e.g., dev:topic, build:topic)
 ```
 
 ---
