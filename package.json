@@ -6,6 +6,8 @@
   "scripts": {
     "dev:tug": "slidev talks/datacooper-tug-share/slides.md --open",
     "dev:tug:en": "slidev talks/datacooper-tug-share/slides-en.md --open",
+    "dev:tug:onepage:en": "slidev talks/datacooper-tug-share-onepage-en/slides.md --open --host 0.0.0.0 --port 3031",
+    "dev:tug:onepage:en:v2": "slidev talks/datacooper-tug-share-onepage-en-v2/slides.md --open --host 0.0.0.0 --port 3032",
     "build:tug": "pnpm build:tug:cn && pnpm build:tug:en",
     "build:tug:cn": "node -e \"const{execSync}=require('child_process');const p=require('path');execSync('slidev build talks/datacooper-tug-share/slides.md --out '+p.join(process.cwd(),'dist','tug')+' --base /datacooper-tug-share/',{stdio:'inherit'})\"",
     "build:tug:en": "node -e \"const{execSync}=require('child_process');const p=require('path');execSync('slidev build talks/datacooper-tug-share/slides-en.md --out '+p.join(process.cwd(),'dist','tug','en')+' --base /datacooper-tug-share/en/',{stdio:'inherit'})\"",
